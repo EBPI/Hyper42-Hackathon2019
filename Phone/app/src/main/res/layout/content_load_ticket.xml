@@ -13,11 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         android:columnCount="2"
-        android:gravity="center|center_vertical"
+        android:gravity="center"
         android:rowCount="6"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="10dp">
         <!--tools:layout_editor_absoluteX="10dp"-->
@@ -28,19 +26,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_columnSpan="2"
-            android:layout_margin="5dp"
+            android:layout_marginBottom="5dp"
             android:text="Travel info"
-            android:textSize="30dp"
-            android:textColor="@color/klm_blue"/>
+            android:textColor="@color/klm_blue"
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="Ticket Nr:"
-            
-            android:textSize="24dp" />
+            android:text="Ticket Number"
+
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/textView11"
@@ -48,8 +46,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="74000017191"
-            
-            android:textSize="24dp" />
+
+            android:textSize="20dp" />
 
 
         <TextView
@@ -58,8 +56,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="Flight Number:"
-            
-            android:textSize="24dp" />
+
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/textView15"
@@ -67,8 +65,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="KL007"
-            
-            android:textSize="24dp" />
+
+            android:textSize="20dp" />
 
 
         <TextView
@@ -77,8 +75,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="Destination:"
-            
-            android:textSize="24dp" />
+
+            android:textSize="20dp" />
 
 
         <TextView
@@ -87,8 +85,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="CUR"
-            
-            android:textSize="24dp" />
+
+            android:textSize="20dp" />
 
 
         <TextView
@@ -97,8 +95,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="Departure Time:"
-            
-            android:textSize="24dp" />
+
+            android:textSize="20dp" />
 
 
         <TextView
@@ -107,17 +105,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="16:40"
-            
-            android:textSize="24dp" />
+
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="Seat Nr:"
-            
-            android:textSize="24dp" />
+            android:text="Seat Number:"
+
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/textView18"
@@ -125,8 +123,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="F10"
-            
-            android:textSize="24dp" />
+
+            android:textSize="20dp" />
+
         <Button
             android:id="@+id/button"
             android:layout_width="126dp"
@@ -135,8 +134,9 @@
             android:layout_gravity="center_horizontal"
             android:background="@drawable/button_primary"
             android:text="Confirm"
+            android:textColor="@color/klm_white"
             android:textSize="20dp"
-            android:textColor="@color/klm_white" />
+            android:layout_marginTop="20dp" />
         <!--NEXT LINE -->
 
     </GridLayout>

@@ -51,8 +51,8 @@ public class BackendServiceImpl implements BackendService {
     public TravelDataResponse submitData(TravelDataRequest data) {
         Map<String, String> claimIds = new HashMap<>();
         try {
-            PassportData passportData = mapper.readValue(data.getPassportData(), PassportData.class);
-            FlightData flightData = mapper.readValue(data.getTravelData(), FlightData.class);
+            PassportData passportData = mapper.readValue(Base64.getDecoder().decode(data.getPassportData()), PassportData.class);
+            FlightData flightData = mapper.readValue(Base64.getDecoder().decode(data.getTravelData()), FlightData.class);
             List<Authorisation> authorisations = data.getAuthorisation();
             Optional<String[]> olderEightteen = registerOlderEightteen(passportData, authorisations);
             addClaimId(claimIds, olderEightteen);
