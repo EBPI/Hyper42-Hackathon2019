@@ -117,7 +117,7 @@
                             android:layout_height="wrap_content"
                             android:paddingLeft="10dp"
                             android:paddingBottom="10dp"
-                            android:text="Accessed by: KLM, Security, Stores &amp; KLM Lounge." />
+                            android:text="Accessible by: Airlines, Security, Stores &amp; Airlines Lounge." />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -206,7 +206,7 @@
                             android:paddingLeft="10dp"
                             android:paddingBottom="10dp"
 
-                            android:text="Accessed by: Customs, KLM, Security &amp; KLM Lounge." />
+                            android:text="Accessible by: Customs, Airlines, Security &amp; Lounge." />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -295,7 +295,7 @@
                             android:paddingLeft="10dp"
                             android:paddingBottom="10dp"
 
-                            android:text="Accessed by: Customs, KLM, Security &amp; KLM Lounge." />
+                            android:text="Accessible by: Customs, Airlines, Security &amp; Lounge." />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -384,7 +384,7 @@
                             android:paddingLeft="10dp"
                             android:paddingBottom="10dp"
 
-                            android:text="Accessed by: Customs, KLM, Security &amp; KLM Lounge." />
+                            android:text="Accessible by: Customs, Airlines, Security &amp; Lounge." />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -416,7 +416,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Claims"
-        android:textColor="#000"
+        android:textColor="@color/klm_black"
         android:textSize="30dp"
         android:textStyle="bold|normal" />
 </RelativeLayout>
