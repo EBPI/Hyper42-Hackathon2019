@@ -5,6 +5,7 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="klm_blue">#00A1DE</color>
+    <color name="klm_black">#0000</color>
     <color name="klm_lightblue">#CCECF8</color>
     <color name="klm_night_blue">#003145</color>
     <color name="klm_white">#FFFFFF</color>
