@@ -111,25 +111,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         travelInfoCall.enqueue(new Callback<TravelDataResponse>() {
             @Override
             public void onResponse(Call<TravelDataResponse> call, Response<TravelDataResponse> response) {
-                File file = new File(getContext().getFilesDir(), "travelDataResponse.json");
-                Gson gson = new Gson();
-                String json = gson.toJson(response.body());
-                FileOutputStream stream = null;
-                try {
-                    stream = new FileOutputStream(file);
-                    stream.write(json.getBytes());
-                    Toast.makeText(getContext(), "Claims submitted", Toast.LENGTH_SHORT).show();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } finally {
-                    if (stream != null) {
-                        try {
-                            stream.close();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
+                saveJson(response);
             }
 
             @Override
@@ -138,6 +120,28 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 Log.e(TAG, "onFailure: ", t);
             }
         });
+    }
+
+    private void saveJson(Response<TravelDataResponse> response) {
+        File file = new File(getContext().getFilesDir(), "travelDataResponse.json");
+        Gson gson = new Gson();
+        String json = gson.toJson(response.body());
+        FileOutputStream stream = null;
+        try {
+            stream = new FileOutputStream(file);
+            stream.write(json.getBytes());
+            Toast.makeText(getContext(), "Claims submitted", Toast.LENGTH_SHORT).show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (stream != null) {
+                try {
+                    stream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     private void onButtonOneClick(View view) {
