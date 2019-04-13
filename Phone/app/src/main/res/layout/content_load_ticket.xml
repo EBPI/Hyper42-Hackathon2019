@@ -8,61 +8,136 @@
     tools:context=".LoadTicket"
     tools:showIn="@layout/activity_load_ticket">
 
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal|center_vertical"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:columnCount="2"
+        android:gravity="center|center_vertical"
+        android:rowCount="6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="10dp">
+        <!--tools:layout_editor_absoluteX="10dp"-->
+        <!--tools:layout_editor_absoluteY="10dp">-->
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_margin="5dp"
+            android:text="Travel info"
+            android:textSize="30dp"
+            android:textColor="@color/klm_blue"/>
+
+        <TextView
+            android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Travel info"
-            android:textSize="30dp" />
+            android:layout_gravity="fill_horizontal"
+            android:text="Ticket Nr:"
+            
+            android:textSize="24dp" />
 
         <TextView
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ticket Nr: 74000017191"
+            android:layout_gravity="fill_horizontal"
+            android:text="74000017191"
+            
             android:textSize="24dp" />
 
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Flight Number: KL007"
-            android:textSize="24dp" />
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Destination: CUR"
-            android:textSize="24dp" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Departure Time: 16:40"
+            android:layout_gravity="fill_horizontal"
+            android:text="Flight Number:"
+            
             android:textSize="24dp" />
 
         <TextView
             android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Seat Nr: F10"
+            android:layout_gravity="fill_horizontal"
+            android:text="KL007"
+            
             android:textSize="24dp" />
 
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="Destination:"
+            
+            android:textSize="24dp" />
+
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="CUR"
+            
+            android:textSize="24dp" />
+
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="Departure Time:"
+            
+            android:textSize="24dp" />
+
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="16:40"
+            
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="Seat Nr:"
+            
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="F10"
+            
+            android:textSize="24dp" />
         <Button
             android:id="@+id/button"
             android:layout_width="126dp"
             android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal"
             android:background="@drawable/button_primary"
             android:text="Confirm"
-            android:layout_margin="5dp"
+            android:textSize="20dp"
             android:textColor="@color/klm_white" />
-    </LinearLayout>
+        <!--NEXT LINE -->
+
+    </GridLayout>
 </android.support.constraint.ConstraintLayout>

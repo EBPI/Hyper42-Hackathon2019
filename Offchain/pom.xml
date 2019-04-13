@@ -268,7 +268,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <repository>kim-offchain</repository>
+                    <repository>registry.hyperport.nl:5000/kim-offchain</repository>
                     <tag>kim-offchain_${project.version}</tag>
                     <buildArgs>
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>

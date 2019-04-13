@@ -7,7 +7,7 @@ networks:
 services:
   mongodb:
     image: mongo:latest
-    container_name: "kim_data"
+    container_name: "kim-offchain-data"
     restart: always
     ports:
       - 27317:27017
@@ -17,10 +17,10 @@ services:
       - mongo-data-data:/data/db
       - mongo-config-data:/data/configdb
   kim-offchain:
-    image: kim-offchain
-    container_name: kim-offchain
+    image: registry.hyperport.nl:5000/kim-offchain:kim-offchain_1.0.0-SNAPSHOT
+    container_name: "kim-offchain"
     ports:
-      - 8000:8000
+      - 7090:7090
     networks:
       - net_hyper42
     depends_on: [mongodb]

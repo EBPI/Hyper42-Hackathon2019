@@ -24,6 +24,7 @@
         app:tabSelectedTextColor="@color/klm_white"
         app:tabTextColor="@color/klm_gray"
         app:tabTextAppearance="@style/CustomTextAppearance"
+
         />
 
     <android.support.v4.view.ViewPager

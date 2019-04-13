@@ -12,16 +12,16 @@ import org.springframework.stereotype.Component;
  * @author rshunmugam
  */
 @Component
-public final class HashUtil {
+public final class OffchainHashUtil {
     /**
      * Logging instantiation for this class
      */
-    private static final Logger LOG = LoggerFactory.getLogger(HashUtil.class);
+    private static final Logger LOG = LoggerFactory.getLogger(OffchainHashUtil.class);
 
     /**
      * Default Constructor
      */
-    private HashUtil() {
+    private OffchainHashUtil() {
         // private no-args constructor to prevent instantiation
     }
 
@@ -31,10 +31,10 @@ public final class HashUtil {
      * @param input
      * @return
      */
-    public static String getSHA(String input) {
-        LOG.trace("HashUtil -> getSHA called with input {}", input);
-        String hashedInput = Hashing.sha256().hashString(input, StandardCharsets.UTF_8).toString();
-        LOG.debug("HashUtil -> getSHA result {}", hashedInput);
-        return hashedInput;
+    public static String getHash(String input) {
+        LOG.trace("getting hash for {}", input);
+        String hash = Hashing.sha256().hashString(input, StandardCharsets.UTF_8).toString();
+        LOG.debug("Hash is{}", hash);
+        return hash;
     }
 }

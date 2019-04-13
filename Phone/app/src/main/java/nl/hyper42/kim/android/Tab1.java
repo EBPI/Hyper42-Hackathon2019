@@ -11,8 +11,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import nl.hyper42.kim.android.generated.info.FlightInfo;
+import nl.hyper42.kim.android.generated.travel.Authorisation;
+import nl.hyper42.kim.android.generated.travel.TravelDataRequest;
+import nl.hyper42.kim.android.generated.travel.TravelDataResponse;
 import nl.hyper42.kim.android.info.InfoClient;
+import nl.hyper42.kim.android.travel.TravelClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -49,20 +56,61 @@ public class Tab1 extends Fragment implements View.OnClickListener {
     }
 
     private void onButtonTwoClick() {
-//        Call<FlightInfo> flightInfoCall = InfoClient.getInfoService().getFlightInfo();
-//        flightInfoCall.enqueue(new Callback<FlightInfo>() {
-//            @Override
-//            public void onResponse(Call<FlightInfo> call, Response<FlightInfo> response) {
-//                Toast.makeText(getContext(), "success", Toast.LENGTH_SHORT).show();
-//            }
-//
-//            @Override
-//            public void onFailure(Call<FlightInfo> call, Throwable t) {
-//                Toast.makeText(getContext(), "failure", Toast.LENGTH_SHORT).show();
-//                Log.e(TAG, "onFailure: ", t);
-//            }
-//        });
-//        Toast.makeText(getContext(), "you choose button 2", Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void createClaims (List olderEightteenRoles,  List euCitizenroles, List outsideEURoles, List flyingBlueLevelRoles) {
+        String passportData = "{\"name\": \"MyName\", \"DateOfBirth\": \"1998-04-12\", \"Nationality\": \"Netherlands\", \"ExpirationDate\": \"2024-04-23\", \"Photo\": \"base64encodedPhoto\"}";
+        String travelData = "{\"FlightNumber\": \"KL123\", \"Date\": \"2019-06-12\", \"Departure\": \"AMS\", \"DepartureCountry\": \"Netherlands\", \"Destination\": \"BRU\", \"DestinationCountry\": \"Belgium\", \"FlightBlue\": \"Silver\"}";
+
+        List<Authorisation> authorisations = new ArrayList<>();
+
+ //       List olderEightteenRoles = new ArrayList <>();
+        Authorisation olderEightteen = new Authorisation();
+        olderEightteen.setClaimName("OlderEightteen");
+        olderEightteen.setRole(olderEightteenRoles);
+
+ //       List euCitizenroles = new ArrayList <>();
+        Authorisation euCitizen = new Authorisation();
+        euCitizen.setClaimName("EUCitizen");
+        euCitizen.setRole(euCitizenroles);
+
+//        List outsideEURoles = new ArrayList <>();
+        Authorisation travelOutsideEU = new Authorisation();
+        travelOutsideEU.setClaimName("TravelOutsideEU");
+        travelOutsideEU.setRole(outsideEURoles);
+
+ //       List flyingBlueLevelRoles = new ArrayList <>();
+        Authorisation flyingBlueLevel = new Authorisation();
+        flyingBlueLevel.setClaimName("FlyingBlueLevel");
+        flyingBlueLevel.setRole(flyingBlueLevelRoles);
+
+        authorisations.add(olderEightteen);
+        authorisations.add(euCitizen);
+        authorisations.add(travelOutsideEU);
+        authorisations.add(flyingBlueLevel);
+
+        TravelDataRequest request = new TravelDataRequest();
+        request.setPassportData(passportData);
+        request.setAuthorisation(authorisations);
+        request.setTravelData(travelData);
+
+        Call<TravelDataResponse> travelInfoCall = TravelClient.getTravelService().registerFlight(request);
+
+
+       travelInfoCall.enqueue(new Callback<TravelDataResponse>() {
+            @Override
+            public void onResponse(Call<TravelDataResponse> call, Response<TravelDataResponse> response) {
+                Toast.makeText(getContext(), "success", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<TravelDataResponse> call, Throwable t) {
+                Toast.makeText(getContext(), "failure", Toast.LENGTH_SHORT).show();
+                Log.e(TAG, "onFailure: ", t);
+            }
+        });
+        Toast.makeText(getContext(), "you choose button 2", Toast.LENGTH_SHORT).show();
         Intent myIntent = new Intent(getActivity(), LoadTicket.class);
 //        myIntent.putExtra("key", value); //Optional parameters
         Tab1.this.startActivity(myIntent);

@@ -3,13 +3,13 @@ package nl.hyper42.kim.backend.utils;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ApplicationRuntimeExceptionTest {
+public class BackendApplicationRuntimeExceptionTest {
 
     @Test
     public void testApplicationRuntimeException() {
         try {
-            throw new ApplicationRuntimeException();
-        } catch (ApplicationRuntimeException are) {
+            throw new BackendApplicationRuntimeException();
+        } catch (BackendApplicationRuntimeException are) {
             Assert.assertNull(are.getMessage());
             Assert.assertNull(are.getCause());
         }
@@ -18,8 +18,8 @@ public class ApplicationRuntimeExceptionTest {
     @Test
     public void testApplicationRuntimeExceptionMessage() {
         try {
-            throw new ApplicationRuntimeException("message");
-        } catch (ApplicationRuntimeException are) {
+            throw new BackendApplicationRuntimeException("message");
+        } catch (BackendApplicationRuntimeException are) {
             Assert.assertEquals("message", are.getMessage());
             Assert.assertNull(are.getCause());
         }
@@ -28,8 +28,8 @@ public class ApplicationRuntimeExceptionTest {
     @Test
     public void testApplicationRuntimeExceptionSource() {
         try {
-            throw new ApplicationRuntimeException(new RuntimeException());
-        } catch (ApplicationRuntimeException are) {
+            throw new BackendApplicationRuntimeException(new RuntimeException());
+        } catch (BackendApplicationRuntimeException are) {
             Assert.assertEquals("java.lang.RuntimeException", are.getCause().getClass().getName());
         }
     }
@@ -37,8 +37,8 @@ public class ApplicationRuntimeExceptionTest {
     @Test
     public void testApplicationRuntimeExceptionMessageSource() {
         try {
-            throw new ApplicationRuntimeException("message", new RuntimeException());
-        } catch (ApplicationRuntimeException are) {
+            throw new BackendApplicationRuntimeException("message", new RuntimeException());
+        } catch (BackendApplicationRuntimeException are) {
             Assert.assertEquals("java.lang.RuntimeException", are.getCause().getClass().getName());
             Assert.assertEquals("message", are.getMessage());
         }

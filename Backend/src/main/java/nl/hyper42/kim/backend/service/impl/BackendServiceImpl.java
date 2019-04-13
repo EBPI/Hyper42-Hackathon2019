@@ -23,7 +23,7 @@ import nl.hyper42.kim.backend.model.generated.api.TravelDataResponse;
 import nl.hyper42.kim.backend.model.generated.model.FlightData;
 import nl.hyper42.kim.backend.model.generated.model.PassportData;
 import nl.hyper42.kim.backend.service.BackendService;
-import nl.hyper42.kim.backend.utils.ApplicationRuntimeException;
+import nl.hyper42.kim.backend.utils.BackendApplicationRuntimeException;
 import nl.hyper42.kim.backend.utils.EUStates;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -73,7 +73,7 @@ public class BackendServiceImpl implements BackendService {
                     .withDataHashAddress(hashId).withDataHashSalt(salt).withPhotoAddress(photoInfo.get(0)).withPhotoKey(photoInfo.get(1));
         } catch (IOException | InterruptedException e) {
             LOG.error("Cannot read passport", e);
-            throw new ApplicationRuntimeException(e);
+            throw new BackendApplicationRuntimeException(e);
         }
     }
 

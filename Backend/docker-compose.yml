@@ -6,8 +6,8 @@ networks:
 
 services:
   backend:
-     image: kim-offchain_1.0.0-SNAPSHOT
-     container_name: "kim-offchain"
+     image: registry.hyperport.nl:5000/kim-backend:kim-offchain_1.0.0-SNAPSHOT
+     container_name: "kim-backend"
      volumes:
       - ../blockchain-platform/bc-network/crypto-config:/crypto-config
      ports:

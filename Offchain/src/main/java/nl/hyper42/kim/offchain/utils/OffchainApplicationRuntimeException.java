@@ -1,18 +1,18 @@
-package nl.hyper42.kim.backend.utils;
+package nl.hyper42.kim.offchain.utils;
 
 /**
  * The Exception that is thrown by this Application if a runtime problem occures.
  * 
  * @author Micha Wensveen
  */
-public class ApplicationRuntimeException extends RuntimeException {
+public class OffchainApplicationRuntimeException extends RuntimeException {
 
     private static final long serialVersionUID = 2687764222713082249L;
 
     /**
      * Instantiates a new ApplicationRuntimeException.
      */
-    public ApplicationRuntimeException() {
+    public OffchainApplicationRuntimeException() {
         // Default Constructor
     }
 
@@ -21,7 +21,7 @@ public class ApplicationRuntimeException extends RuntimeException {
      * 
      * @param message - String
      */
-    public ApplicationRuntimeException(String message) {
+    public OffchainApplicationRuntimeException(String message) {
         super(message);
     }
 
@@ -30,7 +30,7 @@ public class ApplicationRuntimeException extends RuntimeException {
      * 
      * @param cause - Throwable
      */
-    public ApplicationRuntimeException(Throwable cause) {
+    public OffchainApplicationRuntimeException(Throwable cause) {
         super(cause);
     }
 
@@ -40,7 +40,7 @@ public class ApplicationRuntimeException extends RuntimeException {
      * @param message - String
      * @param cause - Throwable
      */
-    public ApplicationRuntimeException(String message, Throwable cause) {
+    public OffchainApplicationRuntimeException(String message, Throwable cause) {
         super(message, cause);
     }
 
