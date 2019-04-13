@@ -12,9 +12,7 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +30,8 @@ import retrofit2.Response;
  */
 
 public class Tab1 extends Fragment implements View.OnClickListener {
+    private static final String PASSPORT_DATA = "{\"name\": \"MyName\", \"DateOfBirth\": \"1998-04-12\", \"Nationality\": \"Netherlands\", \"ExpirationDate\": \"2024-04-23\", \"Photo\": \"base64encodedPhoto\"}";
+    private static final String TRAVEL_DATA = "{\"FlightNumber\": \"KL123\", \"Date\": \"2019-06-12\", \"Departure\": \"AMS\", \"DepartureCountry\": \"Netherlands\", \"Destination\": \"BRU\", \"DestinationCountry\": \"Belgium\", \"FlightBlue\": \"Silver\"}";
 
     private String TAG = "Tab1";
     private int[][] permissions = new int[4][6];
@@ -70,40 +70,18 @@ public class Tab1 extends Fragment implements View.OnClickListener {
     }
 
     public void createClaims(List<String> olderEightteenRoles, List<String> euCitizenroles, List<String> outsideEURoles, List<String> flyingBlueLevelRoles) {
-        String passportData = "{\"name\": \"MyName\", \"DateOfBirth\": \"1998-04-12\", \"Nationality\": \"Netherlands\", \"ExpirationDate\": \"2024-04-23\", \"Photo\": \"base64encodedPhoto\"}";
-        String travelData = "{\"FlightNumber\": \"KL123\", \"Date\": \"2019-06-12\", \"Departure\": \"AMS\", \"DepartureCountry\": \"Netherlands\", \"Destination\": \"BRU\", \"DestinationCountry\": \"Belgium\", \"FlightBlue\": \"Silver\"}";
 
         List<Authorisation> authorisations = new ArrayList<>();
 
-        //       List olderEightteenRoles = new ArrayList <>();
-        Authorisation olderEightteen = new Authorisation();
-        olderEightteen.setClaimName("OlderEightteen");
-        olderEightteen.setRole(olderEightteenRoles);
-
-        //       List euCitizenroles = new ArrayList <>();
-        Authorisation euCitizen = new Authorisation();
-        euCitizen.setClaimName("EUCitizen");
-        euCitizen.setRole(euCitizenroles);
-
-//        List outsideEURoles = new ArrayList <>();
-        Authorisation travelOutsideEU = new Authorisation();
-        travelOutsideEU.setClaimName("TravelOutsideEU");
-        travelOutsideEU.setRole(outsideEURoles);
-
-        //       List flyingBlueLevelRoles = new ArrayList <>();
-        Authorisation flyingBlueLevel = new Authorisation();
-        flyingBlueLevel.setClaimName("FlyingBlueLevel");
-        flyingBlueLevel.setRole(flyingBlueLevelRoles);
-
-        authorisations.add(olderEightteen);
-        authorisations.add(euCitizen);
-        authorisations.add(travelOutsideEU);
-        authorisations.add(flyingBlueLevel);
+        authorisations.add(new Authorisation().withClaimName("OlderEightteen").withRole(olderEightteenRoles));
+        authorisations.add(new Authorisation().withClaimName("EUCitizen").withRole(euCitizenroles));
+        authorisations.add(new Authorisation().withClaimName("TravelOutsideEU").withRole(outsideEURoles));
+        authorisations.add(new Authorisation().withClaimName("FlyingBlueLevel").withRole(flyingBlueLevelRoles));
 
         TravelDataRequest request = new TravelDataRequest();
-        request.setPassportData(passportData);
+        request.setPassportData(PASSPORT_DATA);
         request.setAuthorisation(authorisations);
-        request.setTravelData(travelData);
+        request.setTravelData(TRAVEL_DATA);
 
         Call<TravelDataResponse> travelInfoCall = TravelClient.getTravelService().registerFlight(request);
 
