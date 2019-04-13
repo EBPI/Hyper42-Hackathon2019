@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">KIM: your personal KLM assistent</string>
+    <string name="app_name">KIM: your personal KLM assistant</string>
     <string name="tab1">Enrollment</string>
-    <string name="tab2">At Airport</string>
-    <string name="title_activity_passport">Passport</string>
-    <string name="title_activity_load_ticket">LoadTicket</string>
+    <string name="tab2">At airport</string>
+    <string name="title_activity_passport">Passport info</string>
+    <string name="title_activity_load_ticket">Load ticket</string>
     <string name="title_activity_claims_list">Claims list</string>
     <string name="title_activity_claims_details">Claims details</string>
 

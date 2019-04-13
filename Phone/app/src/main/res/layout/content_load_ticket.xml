@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="Ticket Number"
+            android:text="Ticket number"
 
             android:textSize="20dp" />
 
@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="Flight Number:"
+            android:text="Flight number:"
 
             android:textSize="20dp" />
 
@@ -94,7 +94,7 @@
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="Departure Time:"
+            android:text="Departure time:"
 
             android:textSize="20dp" />
 
@@ -113,7 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="Seat Number:"
+            android:text="Seat number:"
 
             android:textSize="20dp" />
 

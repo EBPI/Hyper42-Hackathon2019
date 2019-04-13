@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_columnSpan="2"
             android:layout_marginBottom="5dp"
-            android:text="Passport Details"
+            android:text="Passport details"
             android:textColor="@color/klm_blue"
             android:textSize="30dp" />
 
@@ -36,7 +36,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="Passport Number:"
+            android:text="Passport number:"
 
             android:textSize="20dp" />
 
@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="First Name:"
+            android:text="First name:"
 
             android:textSize="20dp" />
 
@@ -73,7 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="Last Name:"
+            android:text="Last name:"
 
             android:textSize="20dp" />
 
@@ -91,7 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="Date of Brith:"
+            android:text="Date of birth:"
 
 
             android:textSize="20dp" />
