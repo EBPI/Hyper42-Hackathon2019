@@ -20,6 +20,7 @@ import nl.hyper42.kim.backend.model.generated.api.Authorisation;
 import nl.hyper42.kim.backend.model.generated.api.ClaimAddress;
 import nl.hyper42.kim.backend.model.generated.api.TravelDataRequest;
 import nl.hyper42.kim.backend.model.generated.api.TravelDataResponse;
+import nl.hyper42.kim.backend.model.generated.model.FlightData;
 import nl.hyper42.kim.backend.model.generated.model.PassportData;
 import nl.hyper42.kim.backend.service.BackendService;
 import nl.hyper42.kim.backend.utils.ApplicationRuntimeException;
@@ -51,15 +52,18 @@ public class BackendServiceImpl implements BackendService {
         Map<String, String> claimIds = new HashMap<>();
         try {
             PassportData passportData = mapper.readValue(data.getPassportData(), PassportData.class);
+            FlightData flightData = mapper.readValue(data.getTravelData(), FlightData.class);
             List<Authorisation> authorisations = data.getAuthorisation();
             Optional<String[]> olderEightteen = registerOlderEightteen(passportData, authorisations);
             addClaimId(claimIds, olderEightteen);
             Optional<String[]> olderTwentyOne = registerOlderTwentyOne(passportData, authorisations);
             addClaimId(claimIds, olderTwentyOne);
-            Optional<String[]> outsideEeu = registerOutsideEu(passportData, authorisations);
+            Optional<String[]> outsideEeu = registerOutsideEu(flightData, authorisations);
             addClaimId(claimIds, outsideEeu);
             Optional<String[]> euCitizen = registerEUCitizen(passportData, authorisations);
             addClaimId(claimIds, euCitizen);
+            Optional<String[]> flyingBlueLevel = registerFlyingBlueLevel(flightData, authorisations);
+            addClaimId(claimIds, flyingBlueLevel);
             List<String> photoInfo = storeProfilePic(Base64.getDecoder().decode(data.getPhoto()));
             String salt = makeSalt();
             String hashId = storeHash(claimIds, photoInfo.get(0), salt);
@@ -73,12 +77,24 @@ public class BackendServiceImpl implements BackendService {
         }
     }
 
-    private Optional<String[]> registerOutsideEu(PassportData passportData, List<Authorisation> authorisations) throws InterruptedException {
+    private Optional<String[]> registerFlyingBlueLevel(FlightData flightData, List<Authorisation> authorisations) throws InterruptedException {
+        Optional<Authorisation> foundAuthorisation = findAuthorisation(ClaimCodes.FlyingBlueLevel.name(), authorisations);
+        if (foundAuthorisation.isPresent()) {
+            String id = UUID.randomUUID().toString();
+            Authorisation authorisation = foundAuthorisation.get();
+            registerClaim(id, ClaimCodes.FlyingBlueLevel.name(), flightData.getFlightBlue(), authorisation.getWho(), authorisation.getWhere(),
+                    authorisation.getRole());
+            return Optional.of(new String[] { ClaimCodes.FlyingBlueLevel.name(), id });
+        }
+        return Optional.empty();
+    }
+
+    private Optional<String[]> registerOutsideEu(FlightData flightData, List<Authorisation> authorisations) throws InterruptedException {
         Optional<Authorisation> foundAuthorisation = findAuthorisation(ClaimCodes.TravelOutsideEU.name(), authorisations);
         if (foundAuthorisation.isPresent()) {
             boolean outsideEU = false;
             try {
-                EUStates.valueOf(passportData.getNationality());
+                EUStates.valueOf(flightData.getDestinationCountry());
                 outsideEU = true;
             } catch (IllegalArgumentException e) {
                 // not leaving eu

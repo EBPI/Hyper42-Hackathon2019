@@ -73,15 +73,15 @@ function buildBackend {
 
 # PHASE 2.2: STARTING BACKEND APPS
 function runBackend {
-  cd backend
+  cd Backend
   echo "---Start building backend services...---"
   echo "---Starting information service...---"
-  nohup docker-compose up > target/information_logs.out &
+  nohup docker-compose up > target/backend_logs.out &
   sleep 5
   
-  cd ../contour
+  cd ../Offchain
   echo "---Starting contour service...---"
-  nohup docker-compose up > target/contour_logs.out &
+  nohup docker-compose up > target/offchain_logs.out &
   sleep 5
   
   cd ..

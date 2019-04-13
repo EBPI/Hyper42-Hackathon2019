@@ -22,7 +22,9 @@
         android:background="@color/klm_blue"
         app:tabIndicatorColor="@color/klm_white"
         app:tabSelectedTextColor="@color/klm_white"
-        app:tabTextColor="@color/klm_gray" />
+        app:tabTextColor="@color/klm_gray"
+        app:tabTextAppearance="@style/CustomTextAppearance"
+        />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"

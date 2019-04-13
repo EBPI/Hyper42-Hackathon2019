@@ -2,4 +2,6 @@
     <string name="app_name">KIM: your personal KLM assistent</string>
     <string name="tab1">Onboard</string>
     <string name="tab2">At Airport</string>
+    <string name="title_activity_passport">Passport</string>
+    <string name="title_activity_load_ticket">LoadTicket</string>
 </resources>

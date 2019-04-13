@@ -8,36 +8,112 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Tab 1"
+        android:text=""
         android:textColor="@color/klm_text"
-        android:textSize="30dp"
-        android:textStyle="bold|normal" />
+        android:textSize="5dp"
+        android:textStyle="bold|normal"
+        android:fontFamily="@font/roboto"
+        />
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/tab1_top"
         android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button1"
+
+        <!--<Button-->
+            <!--android:id="@+id/button1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/button_primary"-->
+            <!--android:padding="15dp"-->
+            <!--android:paddingHorizontal="32dp"-->
+            <!--android:text="Button one"-->
+            <!--android:textColor="@color/klm_white"-->
+
+
+            <!--android:layout_margin="1dp"/>-->
+
+
+        <!--<Button-->
+            <!--android:id="@+id/button2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/button_secondary"-->
+            <!--android:paddingHorizontal="32dp"-->
+            <!--android:text="New Button"-->
+            <!--android:layout_margin="1dp"/>-->
+        <TextView
+            android:id="@+id/enrollment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_primary"
-            android:padding="15dp"
-            android:paddingHorizontal="32dp"
-            android:text="Button one"
-            android:textColor="@color/klm_white" />
+            android:text="Enrollment"
+            android:textSize="30dp"
+            android:layout_margin="5dp"/>
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Name: Walter"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Name: Wright"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Language: NL"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FlyingBlue level: Gold"
+            android:textSize="24dp" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            android:id="@+id/buttonScanPassport"
+            android:layout_width="177dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_secondary"
             android:paddingHorizontal="32dp"
-            android:text="New Button" />
+            android:text="Scan Passport"
+            android:textColor="@color/klm_white"
+            android:layout_margin="1dp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/buttonLoadTicket"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_secondary"
+            android:paddingHorizontal="32dp"
+            android:text="Load Ticket"
+            android:textColor="@color/klm_white" />
+
+        <Button
+            android:id="@+id/buttonApproveClaims"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_primary"
+            android:paddingHorizontal="32dp"
+            android:text="Approve Claims"
+            android:textColor="@color/klm_white"
+            android:layout_margin="1dp"/>
 
     </LinearLayout>
 </RelativeLayout>
