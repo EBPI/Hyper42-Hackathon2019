@@ -9,6 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +35,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
 
     private String TAG = "Tab1";
     private int[][] permissions = new int[4][6];
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab1, container, false);
@@ -61,18 +69,18 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         Tab1.this.startActivity(myIntent);
     }
 
-    public void createClaims (List<String> olderEightteenRoles,  List<String> euCitizenroles, List<String> outsideEURoles, List<String> flyingBlueLevelRoles) {
+    public void createClaims(List<String> olderEightteenRoles, List<String> euCitizenroles, List<String> outsideEURoles, List<String> flyingBlueLevelRoles) {
         String passportData = "{\"name\": \"MyName\", \"DateOfBirth\": \"1998-04-12\", \"Nationality\": \"Netherlands\", \"ExpirationDate\": \"2024-04-23\", \"Photo\": \"base64encodedPhoto\"}";
         String travelData = "{\"FlightNumber\": \"KL123\", \"Date\": \"2019-06-12\", \"Departure\": \"AMS\", \"DepartureCountry\": \"Netherlands\", \"Destination\": \"BRU\", \"DestinationCountry\": \"Belgium\", \"FlightBlue\": \"Silver\"}";
 
         List<Authorisation> authorisations = new ArrayList<>();
 
- //       List olderEightteenRoles = new ArrayList <>();
+        //       List olderEightteenRoles = new ArrayList <>();
         Authorisation olderEightteen = new Authorisation();
         olderEightteen.setClaimName("OlderEightteen");
         olderEightteen.setRole(olderEightteenRoles);
 
- //       List euCitizenroles = new ArrayList <>();
+        //       List euCitizenroles = new ArrayList <>();
         Authorisation euCitizen = new Authorisation();
         euCitizen.setClaimName("EUCitizen");
         euCitizen.setRole(euCitizenroles);
@@ -82,7 +90,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         travelOutsideEU.setClaimName("TravelOutsideEU");
         travelOutsideEU.setRole(outsideEURoles);
 
- //       List flyingBlueLevelRoles = new ArrayList <>();
+        //       List flyingBlueLevelRoles = new ArrayList <>();
         Authorisation flyingBlueLevel = new Authorisation();
         flyingBlueLevel.setClaimName("FlyingBlueLevel");
         flyingBlueLevel.setRole(flyingBlueLevelRoles);
@@ -100,10 +108,28 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         Call<TravelDataResponse> travelInfoCall = TravelClient.getTravelService().registerFlight(request);
 
 
-       travelInfoCall.enqueue(new Callback<TravelDataResponse>() {
+        travelInfoCall.enqueue(new Callback<TravelDataResponse>() {
             @Override
             public void onResponse(Call<TravelDataResponse> call, Response<TravelDataResponse> response) {
-                Toast.makeText(getContext(), "success", Toast.LENGTH_SHORT).show();
+                File file = new File(getContext().getFilesDir(), "travelDataResponse.json");
+                Gson gson = new Gson();
+                String json = gson.toJson(response.body());
+                FileOutputStream stream = null;
+                try {
+                    stream = new FileOutputStream(file);
+                    stream.write(json.getBytes());
+                    Toast.makeText(getContext(), "Claims submitted", Toast.LENGTH_SHORT).show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } finally {
+                    if (stream != null) {
+                        try {
+                            stream.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
             }
 
             @Override
@@ -118,55 +144,59 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         Intent myIntent = new Intent(getActivity(), Passport.class);
         Tab1.this.startActivity(myIntent);
     }
+
     private void onButtonThreeClick(View view) {
         Intent myIntent = new Intent(getActivity(), ClaimsMenu.class);
 //        myIntent.putExtra("key", value); //Optional parameters
         Bundle permissionsBundle = new Bundle();
-        permissionsBundle.putIntArray("1",permissions[0]);
-        permissionsBundle.putIntArray("2",permissions[1]);
-        permissionsBundle.putIntArray("3",permissions[2]);
-        permissionsBundle.putIntArray("4",permissions[3]);
+        permissionsBundle.putIntArray("1", permissions[0]);
+        permissionsBundle.putIntArray("2", permissions[1]);
+        permissionsBundle.putIntArray("3", permissions[2]);
+        permissionsBundle.putIntArray("4", permissions[3]);
         myIntent.putExtra("permissions", permissionsBundle);
-        Tab1.this.startActivityForResult(myIntent,0);
+        Tab1.this.startActivityForResult(myIntent, 0);
     }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         Bundle messageReturned = data.getBundleExtra("message_return");
         permissions = new int[4][6];
-        permissions[0]=messageReturned.getIntArray("1");
-        permissions[1]=messageReturned.getIntArray("2");
-        permissions[2]=messageReturned.getIntArray("3");
-        permissions[3]=messageReturned.getIntArray("4");;
+        permissions[0] = messageReturned.getIntArray("1");
+        permissions[1] = messageReturned.getIntArray("2");
+        permissions[2] = messageReturned.getIntArray("3");
+        permissions[3] = messageReturned.getIntArray("4");
+        ;
         processAndCreateClaims();
     }
 
-    private void processAndCreateClaims(){
-        String[] roles = {"Airlines","Security","Customs","Shops","Lounge"};
+    private void processAndCreateClaims() {
+        String[] roles = {"Airlines", "Security", "Customs", "Shops", "Lounge"};
         ArrayList<ArrayList<String>> converted_permissions = new ArrayList<>();
-        for (int i=0;i<permissions.length;i++){
+        for (int i = 0; i < permissions.length; i++) {
             ArrayList<String> claim = new ArrayList<>();
-            for (int j=1;j<permissions[0].length;j++){
-                if(permissions[i][j]==1){
-                    claim.add(roles[j-1]);
+            for (int j = 1; j < permissions[0].length; j++) {
+                if (permissions[i][j] == 1) {
+                    claim.add(roles[j - 1]);
                 }
             }
             converted_permissions.add(claim);
         }
-        for (int i=0;i<converted_permissions.size();i++){
-            System.out.println("Claim "+i);
-            for(int j=0;j<converted_permissions.get(0).size();j++){
-                System.out.print(" Role "+j+" "+converted_permissions.get(i).get(j));
+        for (int i = 0; i < converted_permissions.size(); i++) {
+            System.out.println("Claim " + i);
+            for (int j = 0; j < converted_permissions.get(0).size(); j++) {
+                System.out.print(" Role " + j + " " + converted_permissions.get(i).get(j));
             }
             System.out.println();
         }
         createClaims(converted_permissions.get(0), converted_permissions.get(1), converted_permissions.get(2), converted_permissions.get(3));
     }
 
-    private void initPermissions(){
-        for(int i =0; i<4;i++){
+    private void initPermissions() {
+        for (int i = 0; i < 4; i++) {
             permissions[i][0] = i;
-            for (int j = 1;  j<6;j++){
-                permissions[i][j] = 1;}
+            for (int j = 1; j < 6; j++) {
+                permissions[i][j] = 1;
+            }
         }
     }
 }
