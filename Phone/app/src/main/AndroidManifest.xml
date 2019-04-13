@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ClaimsMenu"></activity>
         <activity
             android:name=".LoadTicket"
             android:label="@string/title_activity_load_ticket"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Passport"
             android:label="@string/title_activity_passport"

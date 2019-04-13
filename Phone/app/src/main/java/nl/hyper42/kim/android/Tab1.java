@@ -39,6 +39,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         button.setOnClickListener(this);
         button = view.findViewById(R.id.buttonLoadTicket);
         button.setOnClickListener(this);
+        view.findViewById(R.id.buttonApproveClaims).setOnClickListener(this);
 
         return view;
     }
@@ -51,6 +52,9 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 break;
             case R.id.buttonLoadTicket:
                 onButtonTwoClick();
+                break;
+            case R.id.buttonApproveClaims:
+                onButtonThreeClick(view);
                 break;
         }
     }
@@ -118,6 +122,11 @@ public class Tab1 extends Fragment implements View.OnClickListener {
 
     private void onButtonOneClick(View view) {
         Intent myIntent = new Intent(getActivity(), Passport.class);
+//        myIntent.putExtra("key", value); //Optional parameters
+        Tab1.this.startActivity(myIntent);
+    }
+    private void onButtonThreeClick(View view) {
+        Intent myIntent = new Intent(getActivity(), ClaimsMenu.class);
 //        myIntent.putExtra("key", value); //Optional parameters
         Tab1.this.startActivity(myIntent);
     }

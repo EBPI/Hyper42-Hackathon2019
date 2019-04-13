@@ -13,13 +13,18 @@ import android.view.ViewGroup;
 
 public class Tab3 extends Fragment implements View.OnClickListener {
 
-    private String TAG = "Tab3";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.tab3, container, false);
-        View claim1 = view.findViewById(R.id.claim_1);
-        claim1.setOnClickListener(this);
+        View view = inflater.inflate(R.layout.claims_menu, container, false);
+        View claim = view.findViewById(R.id.claim_1);
+        claim.setOnClickListener(this);
+        claim = view.findViewById(R.id.claim_2);
+        claim.setOnClickListener(this);
+        claim = view.findViewById(R.id.claim_3);
+        claim.setOnClickListener(this);
+        claim = view.findViewById(R.id.claim_4);
+        claim.setOnClickListener(this);
 
         return view;
     }
