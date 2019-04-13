@@ -5,6 +5,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * Created by Rodrigo on 13/04/2018.
@@ -12,6 +13,7 @@ import android.widget.Button;
 public class ClaimsMenu extends AppCompatActivity implements View.OnClickListener {
     static final int RESULT_CODE = 0;
     int[][] permissions ;
+    String[] roles = {"Airlines","Security","Customs","Shops","Lounge"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,5 +77,31 @@ public class ClaimsMenu extends AppCompatActivity implements View.OnClickListene
 //        System.out.println("Message returned = " + messageReturned.toString());
         int index = messageReturned[0];
         permissions[index]= messageReturned;
+        updateAccesibleTexts();
+    }
+    private void updateAccesibleTexts(){
+
+        String[] accesible_texts = new String[permissions.length];
+        for (int j = 0;j<permissions.length;j++){
+            accesible_texts[j] = "None";
+            for (int i = permissions[0].length-1; i>0; i--){
+                 if (permissions[j][i] == 1)
+                        if(accesible_texts[j]=="None")
+                            accesible_texts[j] = " & "+ roles[i-1];
+                        else
+                         accesible_texts[j] = ", "+roles[i-1] +accesible_texts[j];
+            }
+            if (accesible_texts[j].startsWith(" &") || accesible_texts[j].startsWith(", "))
+                accesible_texts[j]= accesible_texts[j].substring(2);
+
+            }
+        TextView text = findViewById(R.id.claim_1_access);
+        text.setText("Accesible by: "+accesible_texts[0]);
+        text = findViewById(R.id.claim_2_access);
+        text.setText("Accesible by: "+accesible_texts[1]);
+        text = findViewById(R.id.claim_3_access);
+        text.setText("Accesible by: "+accesible_texts[2]);
+        text = findViewById(R.id.claim_4_access);
+        text.setText("Accesible by: "+accesible_texts[3]);
     }
 }
