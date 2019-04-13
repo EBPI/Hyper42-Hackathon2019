@@ -1,0 +1,162 @@
+[
+    {
+        "individual": {
+            "gin": 400373351893,
+            "cin": 1220457623
+        },
+        "fbLevel": "GOLD",
+        "fbLevelCode": "FB_C",
+        "miles": {
+            "rank": 2,
+            "label": "{#/miles/amount} Miles",
+            "amount": 100001
+        },
+        "milesValidities": [
+            {
+                "rank": 2,
+                "milesAmount": 30000,
+                "validityDate": "2021-03-31",
+                "label": "{#/milesValidities[0]/milesAmount} valid until {#/milesValidities[0]/validityDate}",
+                "type": "FLIGHT"
+            },
+            {
+                "rank": 2,
+                "milesAmount": 70001,
+                "validityDate": "2021-03-31",
+                "label": "{#/milesValidities[1]/milesAmount} valid until {#/milesValidities[1]/validityDate}",
+                "type": "COMMERCIAL"
+            }
+        ],
+        "lastTransaction": {
+            "rank": 3,
+            "label": "Last activity {#/lastTransaction/date} {#/lastTransaction/description} {#/lastTransaction/milesAmount} Miles {#/lastTransaction/xpActivity[0]/amount} XP",
+            "date": "2019-03-25",
+            "iconURL": "https://img.static-fb.com/images/media/9C102B74-3A63-4100-9486726DE4B5C6C1",
+            "description": "Reward advance",
+            "labelMiles": "{#/lastTransaction/milesAmount} Miles",
+            "labelXP": "{#/lastTransaction/xpAmount} XP",
+            "milesAmount": 2000,
+            "xpAmount": 0,
+            "xpActivity": [
+                {
+                    "type": "XP_TIER",
+                    "amount": 0,
+                    "amountLabel": "{#/lastTransaction/xpActivity[0]/amount} XP"
+                }
+            ],
+            "mileageSummary": {
+                "rel": "Activity overview",
+                "href": "https://api.ute2.klm.com/travel/flyingblue/accounts/1070060186/transactions?channel=b2c&applicationcode=app&offset=1&size=100"
+            }
+        },
+        "cardImage": {
+            "rank": 4,
+            "rel": "Card image",
+            "href": "https://api.ute2.klm.com/travel/flyingblue/accounts/1070060186/card-image?channel=b2c&applicationcode=app"
+        },
+        "frequentFlyerCard": {
+            "rank": 5,
+            "rel": "Add to My Wallet",
+            "href": "https://api.ute2.klm.com/travel/flyingblue/accounts/1070060186/frequentflyercards"
+        },
+        "status": {
+            "rank": 6,
+            "label": "Level",
+            "currentTierLevel": {
+                "tierLevel": "Gold",
+                "tierLevelCode": "C"
+            },
+            "nextTierLevel": {
+                "tierLevel": "Platinum",
+                "tierLevelCode": "D",
+                "label": "Upgrade to {#/status/nextTierLevel/tierLevel}, {#/status/nextTierLevel/xpAmount} XP",
+                "xpAmount": 148,
+                "percentageThreshold": 82
+            },
+            "benefits": {
+                "rel": "Explore my benefits",
+                "href": "https://api.ute2.klm.com/travel/flyingblue/accounts/1070060186/benefits?channel=b2c&applicationcode=app"
+            }
+        }
+    },
+    {
+        "individual": {
+            "gin": 400132891725,
+            "cin": 1221348959
+        },
+        "fbLevel": "EXPLORER",
+        "fbLevelCode": "FB_A",
+        "miles": {
+            "rank": 0,
+            "label": "{#/miles/amount} Miles",
+            "amount": 2000
+        },
+        "milesValidities": [
+            {
+                "rank": 1,
+                "milesAmount": 1000,
+                "validityDate": "2021-03-31",
+                "label": "{#/milesValidities[0]/milesAmount} valid until {#/milesValidities[0]/validityDate}",
+                "type": "FLIGHT"
+            },
+            {
+                "rank": 1,
+                "milesAmount": 1000,
+                "validityDate": "2021-03-31",
+                "label": "{#/milesValidities[1]/milesAmount} valid until {#/milesValidities[1]/validityDate}",
+                "type": "COMMERCIAL"
+            }
+        ],
+        "lastTransaction": {
+            "rank": 3,
+            "label": "Last activity {#/lastTransaction/date} {#/lastTransaction/description} {#/lastTransaction/milesAmount} Miles {#/lastTransaction/xpActivity[0]/amount} XP",
+            "date": "2019-03-25",
+            "iconURL": "https://img.static-fb.com/images/media/9C102B74-3A63-4100-9486726DE4B5C6C1",
+            "description": "Reward advance",
+            "labelMiles": "{#/lastTransaction/milesAmount} Miles",
+            "labelXP": "{#/lastTransaction/xpAmount} XP",
+            "milesAmount": 10,
+            "xpAmount": 0,
+            "xpActivity": [
+                {
+                    "type": "XP_TIER",
+                    "amount": 0,
+                    "amountLabel": "{#/lastTransaction/xpActivity[0]/amount} XP"
+                }
+            ],
+            "mileageSummary": {
+                "rel": "Activity overview",
+                "href": "https://api.ute2.klm.com/travel/flyingblue/accounts/1070060186/transactions?channel=b2c&applicationcode=app&offset=1&size=100"
+            }
+        },
+        "cardImage": {
+            "rank": 4,
+            "rel": "Card image",
+            "href": "https://api.ute2.klm.com/travel/flyingblue/accounts/1070060186/card-image?channel=b2c&applicationcode=app"
+        },
+        "frequentFlyerCard": {
+            "rank": 5,
+            "rel": "Add to My Wallet",
+            "href": "https://api.ute2.klm.com/travel/flyingblue/accounts/1070060186/frequentflyercards"
+        },
+        "status": {
+            "rank": 6,
+            "label": "Level",
+            "currentTierLevel": {
+                "tierLevel": "Explorer",
+                "tierLevelCode": "A"
+            },
+            "nextTierLevel": {
+                "tierLevel": "Silver",
+                "tierLevelCode": "B",
+                "label": "Upgrade to {#/status/nextTierLevel/tierLevel}, {#/status/nextTierLevel/xpAmount} XP",
+                "xpAmount": 100,
+                "percentageThreshold": 0
+            },
+            "benefits": {
+                "rel": "Explore my benefits",
+                "href": "https://api.ute2.klm.com/travel/flyingblue/accounts/1070060186/benefits?channel=b2c&applicationcode=app"
+            }
+        }
+    }
+]
