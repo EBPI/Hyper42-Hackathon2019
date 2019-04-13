@@ -12,6 +12,7 @@
     <color name="klm_text">#000000</color>
     <color name="klm_primary_button">#E37222</color>
     <color name="klm_secondary_button">#00A1DE</color>
+    <color name="klm_disabled_button">#BDBFBF</color>
 
 
 </resources>
