@@ -1,0 +1,522 @@
+[
+	{
+		"individual": {
+			"individualInformations": {
+				"gin": 400373351893,
+				"cin": 1220457623,
+				"version": "19",
+				"gender": "M",
+				"birthDate": "1981-06-03T00:00:00Z",
+				"flagNoFusion": false,
+				"status": "P",
+				"flagThirdTrap": false,
+				"civility": "MR",
+				"lastNameSC": "WRIGHT",
+				"firstNameSC": "WALTER",
+				"languageCode": "NL",
+				"populationType": "IEW"
+			},
+			"individualProfil": {
+				"emailOptin": "T",
+				"languageCode": "NL"
+			},
+			"normalizedName": {
+				"lastName": "WRIGHT",
+				"firstName": "WALTER"
+			}
+		},
+		"fbIdentification": {
+			"fbLevel": "GOLD",
+			"fbLevelStructure": [
+				{
+					"fbLevelRanking": 3,
+					"fbLevelType": "TIER",
+					"fbLevelCode": "C"
+				}
+			],
+			"ptc": "ADT",
+			"fbLogoUrl": "https://afkl-test.bynder.com/m/047c884d44dcee3d/original/fb30_Explorer.png",
+			"fbLogoCode": "FB30_FB_C",
+			"FB_LEVEL": "FB_C"
+		},
+		"contract": {
+			"contractStatus": "V",
+			"statusReason": "V1",
+			"enrollmentDate": "2019-01-09T00:00:00Z",
+			"contractLastUpdate": "2019-01-09T09:45:33Z",
+			"WEL-BONUS": "false"
+		},
+		"tierAndSubTier": {
+			"currentTierCharacteristics": {
+				"currentTierCode": "C",
+				"currentTierLabel": "Gold",
+				"currentStartValidityDate": "2019-01-09T00:00:00Z"
+			},
+			"nextTierLevel": {
+				"nextTierLevelCode": "D",
+				"nextTierLevelLabel": "Platinum",
+				"missingXPToUpgradeToNextTier": 32,
+				"nextTierLevelThreshold": 180
+			}
+		},
+		"attributes": {},
+		"account": {
+			"miles": {
+				"globalAmountMilesBalance": 100001,
+				"lastActivityDate": "2019-03-19T00:00:00Z",
+				"lastDebitCreditOperationDate": "2019-03-25T12:10:36Z",
+				"milesCharacteristics": [
+					{
+						"milesType": "FLIGHT",
+						"milesAmount": 30000,
+						"expiryDate": "2021-03-31T00:00:00Z",
+						"protected": false
+					},
+					{
+						"milesType": "COMMERCIAL",
+						"milesAmount": 70001,
+						"expiryDate": "2021-03-31T00:00:00Z",
+						"protected": false
+					}
+				]
+			}
+		},
+		"authorization": {
+			"earnAuthorization": true,
+			"burnAuthorization": true,
+			"shareAndFlyAuthorization": false
+		},
+		"oldFBProperties": {
+			"oldFBTierLevel": "A",
+			"oldFBContractStatus": "*"
+		},
+		"newFBActivated": true,
+		"postalAddresses": [
+			{
+				"postalAddressProperties": {
+					"indicAdrNorm": true,
+					"version": "1",
+					"mediumCode": "D",
+					"mediumStatus": "I"
+				},
+				"postalAddressContent": {
+					"stateCode": "ZZ",
+					"countryCode": "NL"
+				}
+			}
+		],
+		"emails": [
+			{
+				"email": {
+					"version": "1",
+					"mediumStatus": "V",
+					"mediumCode": "D",
+					"email": "wwright@oddyseymail.com",
+					"emailOptin": "T"
+				}
+			}
+		],
+		"communicationPreferences": [
+			{
+				"domain": "F",
+				"communicationGroupeType": "N",
+				"communicationType": "FB_NEWS",
+				"optIn": "N",
+				"dateOfConsent": "2019-01-09T09:45:42Z",
+				"subscriptionChannel": "MOB",
+				"media": {
+					"media1": "E"
+				},
+				"marketLanguages": [
+					{
+						"market": "NL",
+						"language": "NL",
+						"optIn": "N",
+						"dateOfConsent": "2019-01-09T09:45:42Z",
+						"media": {}
+					}
+				]
+			},
+			{
+				"domain": "F",
+				"communicationGroupeType": "N",
+				"communicationType": "FB_ESS",
+				"optIn": "Y",
+				"dateOfConsent": "2019-01-09T09:45:40Z",
+				"subscriptionChannel": "MOB",
+				"media": {
+					"media1": "E"
+				},
+				"marketLanguages": [
+					{
+						"market": "NL",
+						"language": "NL",
+						"optIn": "Y",
+						"dateOfConsent": "2019-01-09T09:45:40Z",
+						"media": {}
+					}
+				]
+			},
+			{
+				"domain": "F",
+				"communicationGroupeType": "N",
+				"communicationType": "FB_CC",
+				"optIn": "N",
+				"dateOfConsent": "2019-01-09T09:45:42Z",
+				"subscriptionChannel": "MOB",
+				"media": {
+					"media1": "E"
+				},
+				"marketLanguages": [
+					{
+						"market": "NL",
+						"language": "NL",
+						"optIn": "N",
+						"dateOfConsent": "2019-01-09T09:45:42Z",
+						"media": {}
+					}
+				]
+			},
+			{
+				"domain": "F",
+				"communicationGroupeType": "M",
+				"communicationType": "FB_EXCL",
+				"optIn": "N",
+				"dateOfConsent": "2019-01-09T09:45:42Z",
+				"subscriptionChannel": "MOB",
+				"media": {
+					"media1": "E"
+				},
+				"marketLanguages": [
+					{
+						"market": "NL",
+						"language": "NL",
+						"optIn": "N",
+						"dateOfConsent": "2019-01-09T09:45:42Z",
+						"media": {}
+					}
+				]
+			},
+			{
+				"domain": "F",
+				"communicationGroupeType": "N",
+				"communicationType": "RO",
+				"optIn": "N",
+				"dateOfConsent": "2019-01-09T09:45:42Z",
+				"subscriptionChannel": "MOB",
+				"media": {
+					"media1": "E"
+				},
+				"marketLanguages": [
+					{
+						"market": "NL",
+						"language": "NL",
+						"optIn": "N",
+						"dateOfConsent": "2019-01-09T09:45:42Z",
+						"media": {}
+					}
+				]
+			},
+			{
+				"domain": "F",
+				"communicationGroupeType": "N",
+				"communicationType": "FB_PART",
+				"optIn": "N",
+				"dateOfConsent": "2019-01-09T09:45:42Z",
+				"subscriptionChannel": "MOB",
+				"media": {
+					"media1": "E"
+				},
+				"marketLanguages": [
+					{
+						"market": "NL",
+						"language": "NL",
+						"optIn": "N",
+						"dateOfConsent": "2019-01-09T09:45:42Z",
+						"media": {}
+					}
+				]
+			},
+			{
+				"domain": "F",
+				"communicationGroupeType": "N",
+				"communicationType": "FB_PROG",
+				"optIn": "N",
+				"dateOfConsent": "2019-01-09T09:45:42Z",
+				"subscriptionChannel": "MOB",
+				"media": {
+					"media1": "E"
+				},
+				"marketLanguages": [
+					{
+						"market": "NL",
+						"language": "NL",
+						"optIn": "N",
+						"dateOfConsent": "2019-01-09T09:45:42Z",
+						"media": {}
+					}
+				]
+			}
+		]
+	},
+	{
+		"individual": {
+			"individualInformations": {
+				"gin": 400132891725,
+				"cin": 1221348959,
+				"version": "19",
+				"gender": "F",
+				"birthDate": "1993-06-01T00:00:00Z",
+				"flagNoFusion": false,
+				"status": "P",
+				"flagThirdTrap": false,
+				"civility": "MS",
+				"lastNameSC": "EARHART",
+				"firstNameSC": "AMELIA",
+				"languageCode": "NL",
+				"populationType": "IEW"
+			},
+			"individualProfil": {
+				"emailOptin": "T",
+				"languageCode": "NL"
+			},
+			"normalizedName": {
+				"lastName": "EARHART",
+				"firstName": "AMELIA"
+			}
+		},
+		"fbIdentification": {
+			"fbLevel": "EXPLORER",
+			"fbLevelStructure": [
+				{
+					"fbLevelRanking": 1,
+					"fbLevelType": "TIER",
+					"fbLevelCode": "A"
+				}
+			],
+			"ptc": "ADT",
+			"fbLogoUrl": "https://afkl-test.bynder.com/m/047c884d44dcee3d/original/fb30_Explorer.png",
+			"fbLogoCode": "FB30_FB_A",
+			"FB_LEVEL": "FB_A"
+		},
+		"contract": {
+			"contractStatus": "V",
+			"statusReason": "V1",
+			"enrollmentDate": "2019-01-09T00:00:00Z",
+			"contractLastUpdate": "2019-01-09T09:45:33Z",
+			"WEL-BONUS": "false"
+		},
+		"tierAndSubTier": {
+			"currentTierCharacteristics": {
+				"currentTierCode": "C",
+				"currentTierLabel": "Gold",
+				"currentStartValidityDate": "2019-01-09T00:00:00Z"
+			},
+			"nextTierLevel": {
+				"nextTierLevelCode": "B",
+				"nextTierLevelLabel": "Silver",
+				"missingXPToUpgradeToNextTier": 100,
+				"nextTierLevelThreshold": 100
+			}
+		},
+		"attributes": {},
+		"account": {
+			"miles": {
+				"globalAmountMilesBalance": 2000,
+				"lastActivityDate": "2019-03-19T00:00:00Z",
+				"lastDebitCreditOperationDate": "2019-03-25T12:10:36Z",
+				"milesCharacteristics": [
+					{
+						"milesType": "FLIGHT",
+						"milesAmount": 1000,
+						"expiryDate": "2021-03-31T00:00:00Z",
+						"protected": false
+					},
+					{
+						"milesType": "COMMERCIAL",
+						"milesAmount": 1000,
+						"expiryDate": "2021-03-31T00:00:00Z",
+						"protected": false
+					}
+				]
+			}
+		},
+		"authorization": {
+			"earnAuthorization": true,
+			"burnAuthorization": true,
+			"shareAndFlyAuthorization": false
+		},
+		"oldFBProperties": {
+			"oldFBTierLevel": "A",
+			"oldFBContractStatus": "*"
+		},
+		"newFBActivated": true,
+		"postalAddresses": [
+			{
+				"postalAddressProperties": {
+					"indicAdrNorm": true,
+					"version": "1",
+					"mediumCode": "D",
+					"mediumStatus": "I"
+				},
+				"postalAddressContent": {
+					"stateCode": "ZZ",
+					"countryCode": "NL"
+				}
+			}
+		],
+		"emails": [
+			{
+				"email": {
+					"version": "1",
+					"mediumStatus": "V",
+					"mediumCode": "D",
+					"email": "mearhart@oddyseymail.com",
+					"emailOptin": "T"
+				}
+			}
+		],
+		"communicationPreferences": [
+			{
+				"domain": "F",
+				"communicationGroupeType": "N",
+				"communicationType": "FB_NEWS",
+				"optIn": "N",
+				"dateOfConsent": "2019-01-09T09:45:42Z",
+				"subscriptionChannel": "MOB",
+				"media": {
+					"media1": "E"
+				},
+				"marketLanguages": [
+					{
+						"market": "NL",
+						"language": "NL",
+						"optIn": "N",
+						"dateOfConsent": "2019-01-09T09:45:42Z",
+						"media": {}
+					}
+				]
+			},
+			{
+				"domain": "F",
+				"communicationGroupeType": "N",
+				"communicationType": "FB_ESS",
+				"optIn": "Y",
+				"dateOfConsent": "2019-01-09T09:45:40Z",
+				"subscriptionChannel": "MOB",
+				"media": {
+					"media1": "E"
+				},
+				"marketLanguages": [
+					{
+						"market": "NL",
+						"language": "NL",
+						"optIn": "Y",
+						"dateOfConsent": "2019-01-09T09:45:40Z",
+						"media": {}
+					}
+				]
+			},
+			{
+				"domain": "F",
+				"communicationGroupeType": "N",
+				"communicationType": "FB_CC",
+				"optIn": "N",
+				"dateOfConsent": "2019-01-09T09:45:42Z",
+				"subscriptionChannel": "MOB",
+				"media": {
+					"media1": "E"
+				},
+				"marketLanguages": [
+					{
+						"market": "NL",
+						"language": "NL",
+						"optIn": "N",
+						"dateOfConsent": "2019-01-09T09:45:42Z",
+						"media": {}
+					}
+				]
+			},
+			{
+				"domain": "F",
+				"communicationGroupeType": "M",
+				"communicationType": "FB_EXCL",
+				"optIn": "N",
+				"dateOfConsent": "2019-01-09T09:45:42Z",
+				"subscriptionChannel": "MOB",
+				"media": {
+					"media1": "E"
+				},
+				"marketLanguages": [
+					{
+						"market": "NL",
+						"language": "NL",
+						"optIn": "N",
+						"dateOfConsent": "2019-01-09T09:45:42Z",
+						"media": {}
+					}
+				]
+			},
+			{
+				"domain": "F",
+				"communicationGroupeType": "N",
+				"communicationType": "RO",
+				"optIn": "N",
+				"dateOfConsent": "2019-01-09T09:45:42Z",
+				"subscriptionChannel": "MOB",
+				"media": {
+					"media1": "E"
+				},
+				"marketLanguages": [
+					{
+						"market": "NL",
+						"language": "NL",
+						"optIn": "N",
+						"dateOfConsent": "2019-01-09T09:45:42Z",
+						"media": {}
+					}
+				]
+			},
+			{
+				"domain": "F",
+				"communicationGroupeType": "N",
+				"communicationType": "FB_PART",
+				"optIn": "N",
+				"dateOfConsent": "2019-01-09T09:45:42Z",
+				"subscriptionChannel": "MOB",
+				"media": {
+					"media1": "E"
+				},
+				"marketLanguages": [
+					{
+						"market": "NL",
+						"language": "NL",
+						"optIn": "N",
+						"dateOfConsent": "2019-01-09T09:45:42Z",
+						"media": {}
+					}
+				]
+			},
+			{
+				"domain": "F",
+				"communicationGroupeType": "N",
+				"communicationType": "FB_PROG",
+				"optIn": "N",
+				"dateOfConsent": "2019-01-09T09:45:42Z",
+				"subscriptionChannel": "MOB",
+				"media": {
+					"media1": "E"
+				},
+				"marketLanguages": [
+					{
+						"market": "NL",
+						"language": "NL",
+						"optIn": "N",
+						"dateOfConsent": "2019-01-09T09:45:42Z",
+						"media": {}
+					}
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,1 @@
+# Katalon intergrationtest and testdata for KIM

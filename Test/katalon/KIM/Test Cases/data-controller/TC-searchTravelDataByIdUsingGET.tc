@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC-searchTravelDataByIdUsingGET</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f3a31996-5212-4f6f-8c35-098c4f576b6f</testCaseGuid>
+</TestCaseEntity>
