@@ -56,7 +56,8 @@ public class Tab1 extends Fragment implements View.OnClickListener {
     }
 
     private void onButtonTwoClick() {
-
+        Intent myIntent = new Intent(getActivity(), LoadTicket.class);
+        Tab1.this.startActivity(myIntent);
     }
 
     public void createClaims (List<String> olderEightteenRoles,  List<String> euCitizenroles, List<String> outsideEURoles, List<String> flyingBlueLevelRoles) {
@@ -118,7 +119,6 @@ public class Tab1 extends Fragment implements View.OnClickListener {
 
     private void onButtonOneClick(View view) {
         Intent myIntent = new Intent(getActivity(), Passport.class);
-//        myIntent.putExtra("key", value); //Optional parameters
         Tab1.this.startActivity(myIntent);
     }
     private void onButtonThreeClick(View view) {
