@@ -46,6 +46,8 @@ import org.springframework.stereotype.Component;
 @ParametersAreNonnullByDefault
 public class HLFInvoker {
 
+    private static final String CC_NAME = "kimblockchain";
+
     /**
      * Instanties logging for this class
      */
@@ -105,15 +107,15 @@ public class HLFInvoker {
     @Nullable
     public String invokeChaincode(String function, String... args) throws InterruptedException {
         // first get the credentials of the user.
-        User user = new BusinesscardMapper("user1", credentialLocationCertificate, credentialLocationPrivatekey, credentialAffiliation, credentialMspId)
-                .getUser();
+        User user =
+                new BusinesscardMapper("user1", credentialLocationCertificate, credentialLocationPrivatekey, credentialAffiliation, credentialMspId).getUser();
         // get the Hyperledger Fabric client and the channel
         HFClient client = getHfClient(user);
         Channel channel = getChannel(client);
 
         // build the transaction proposal to submit to the chaincode
         TransactionProposalRequest transactionProposalRequest = client.newTransactionProposalRequest();
-        ChaincodeID ccId = ChaincodeID.newBuilder().setName("naturemanagement").build();
+        ChaincodeID ccId = ChaincodeID.newBuilder().setName(CC_NAME).build();
         transactionProposalRequest.setChaincodeID(ccId);
         transactionProposalRequest.setFcn(function);
         transactionProposalRequest.setArgs(args);
@@ -180,15 +182,15 @@ public class HLFInvoker {
      */
     public String queryBlockChain(String queryName, String... args) {
         // first get the credentials of the user.
-        User user = new BusinesscardMapper("user1", credentialLocationCertificate, credentialLocationPrivatekey, credentialAffiliation, credentialMspId)
-                .getUser();
+        User user =
+                new BusinesscardMapper("user1", credentialLocationCertificate, credentialLocationPrivatekey, credentialAffiliation, credentialMspId).getUser();
         // get the Hyperledger Fabric client and the channel
         HFClient client = getHfClient(user);
         Channel channel = getChannel(client);
 
         // build the query proposal to submit to the blockchain
         QueryByChaincodeRequest queryRequest = client.newQueryProposalRequest();
-        ChaincodeID ccId = ChaincodeID.newBuilder().setName("naturemanagement").build();
+        ChaincodeID ccId = ChaincodeID.newBuilder().setName(CC_NAME).build();
         queryRequest.setChaincodeID(ccId);
 
         // CC function to be called
