@@ -3,3 +3,4 @@ exclude:
 - /Backend/src/main/java/nl/hyper42/kim/backend/dao/HLFInvoker.java
 - /Test/.*
 - /blockchain-platform/.*
+- .*/runlocal\.sh
