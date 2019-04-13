@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>TS-SubmitClaim</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>ebd97e83-ce5b-41d5-92a2-fa489c8583ad</testSuiteGuid>
+   <testCaseLink>
+      <guid>35e55a71-97a3-4c4d-b082-0f5be5b088dd</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/backend-controller/TC-submitClaim</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>f1a1b33d-4d2d-4747-baa2-6cf6d257a0e2</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value>1-1</value>
+         </iterationEntity>
+         <testDataId>Data Files/Datacontroller</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>f1a1b33d-4d2d-4747-baa2-6cf6d257a0e2</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>claimAddresses</value>
+         <variableId>460d1ca6-1d1e-4efe-8d7b-9acefd69e7eb</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>f1a1b33d-4d2d-4747-baa2-6cf6d257a0e2</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>dataHash</value>
+         <variableId>42f53172-9de0-41cf-ba86-12852d3cc6f9</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>f1a1b33d-4d2d-4747-baa2-6cf6d257a0e2</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>dataHashLocation</value>
+         <variableId>2a219941-6d27-4e3a-9e1d-85ed731b4224</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>f1a1b33d-4d2d-4747-baa2-6cf6d257a0e2</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>dataHashSalt</value>
+         <variableId>808ca987-3973-405d-bec2-4fa20ce9cdf7</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>f1a1b33d-4d2d-4747-baa2-6cf6d257a0e2</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>photo</value>
+         <variableId>d29d7eab-acc2-4c80-8315-bcb5e7769831</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>
