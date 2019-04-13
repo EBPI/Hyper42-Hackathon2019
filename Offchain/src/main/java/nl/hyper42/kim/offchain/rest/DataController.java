@@ -62,7 +62,7 @@ public final class DataController {
      * @return the id of the stored data.
      */
     @PostMapping(value = "/", produces = { "application/json" })
-    @ApiOperation(value = "Add a new TravelData for the InformationPiece")
+    @ApiOperation(value = "Add a new TravelData for the Traveler")
     @ApiResponses(
             value = { @ApiResponse(code = 200, message = "ID"), @ApiResponse(code = 400, message = "An error has occurred when attempting to parse request"),
                     @ApiResponse(code = 500, message = "A technical error has occurred when attempting to add data") })

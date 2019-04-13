@@ -34,10 +34,12 @@ public class BackendServiceImplTest {
     public void testSubmitData() throws Exception {
         Mockito.when(hlfInvoker.invokeChaincode(methodeCapture.capture(), argsCapture.capture())).thenReturn("bla");
 
-        String passportData =
-                "{\"name\": \"MyName\", \"DateOfBirth\": \"1998-04-12\", \"Nationality\": \"Netherlands\", \"ExpirationDate\": \"2024-04-23\", \"Photo\": \"base64encodedPhoto\"}";
-        String travelData =
-                "{\"FlightNumber\": \"KL123\", \"Date\": \"2019-06-12\", \"Departure\": \"AMS\", \"DepartureCountry\": \"Netherlands\", \"Destination\": \"BRU\", \"DestinationCountry\": \"Belgium\", \"FlightBlue\": \"Silver\"}";
+        String passportData = Base64.getEncoder().encodeToString(
+                "{\"name\": \"MyName\", \"DateOfBirth\": \"1998-04-12\", \"Nationality\": \"Netherlands\", \"ExpirationDate\": \"2024-04-23\", \"Photo\": \"base64encodedPhoto\"}"
+                        .getBytes());
+        String travelData = Base64.getEncoder().encodeToString(
+                "{\"FlightNumber\": \"KL123\", \"Date\": \"2019-06-12\", \"Departure\": \"AMS\", \"DepartureCountry\": \"Netherlands\", \"Destination\": \"BRU\", \"DestinationCountry\": \"Belgium\", \"FlightBlue\": \"Silver\"}"
+                        .getBytes());
         Authorisation aC18 = new Authorisation().withClaimName(ClaimCodes.OlderEightteen.name()).withWho(Arrays.asList("KLM", "Transavia"))
                 .withWhere(Arrays.asList("AMS", "BRU")).withRole(Arrays.asList("Lounge", "Shop"));
         Authorisation aC21 = new Authorisation().withClaimName(ClaimCodes.OlderTwentyOne.name()).withWho(Arrays.asList("KLM2", "Transavia2"))
@@ -130,10 +132,11 @@ public class BackendServiceImplTest {
         Mockito.when(hlfInvoker.invokeChaincode(methodeCapture.capture(), argsCapture.capture())).thenReturn("bla");
         int year = LocalDate.now().getYear() - 20;
         String dob = Integer.toString(year) + "-01-01";
-        String passportData = "{\"name\": \"MyName\", \"DateOfBirth\": \"" + dob
-                + "\", \"Nationality\": \"Dutch\", \"ExpirationDate\": \"2024-04-23\", \"Photo\": \"base64encodedPhoto\"}";
-        String travelData =
-                "{\"FlightNumber\": \"KL123\", \"Date\": \"2019-06-12\", \"Departure\": \"AMS\", \"DepartureCountry\": \"Netherlands\", \"Destination\": \"BRU\", \"DestinationCountry\": \"Belgium\", \"FlightBlue\": \"Silver\"}";
+        String passportData = Base64.getEncoder().encodeToString(("{\"name\": \"MyName\", \"DateOfBirth\": \"" + dob
+                + "\", \"Nationality\": \"Dutch\", \"ExpirationDate\": \"2024-04-23\", \"Photo\": \"base64encodedPhoto\"}").getBytes());
+        String travelData = Base64.getEncoder().encodeToString(
+                "{\"FlightNumber\": \"KL123\", \"Date\": \"2019-06-12\", \"Departure\": \"AMS\", \"DepartureCountry\": \"Netherlands\", \"Destination\": \"BRU\", \"DestinationCountry\": \"Belgium\", \"FlightBlue\": \"Silver\"}"
+                        .getBytes());
         Authorisation aC18 = new Authorisation().withClaimName(ClaimCodes.OlderEightteen.name()).withWho(Arrays.asList("KLM", "Transavia"))
                 .withWhere(Arrays.asList("AMS", "BRU")).withRole(Arrays.asList("Lounge", "Shop"));
         Authorisation aC21 = new Authorisation().withClaimName(ClaimCodes.OlderTwentyOne.name()).withWho(Arrays.asList("KLM2", "Transavia2"))
@@ -174,10 +177,11 @@ public class BackendServiceImplTest {
         Mockito.when(hlfInvoker.invokeChaincode(methodeCapture.capture(), argsCapture.capture())).thenReturn("bla");
         int year = LocalDate.now().getYear() - 17;
         String dob = Integer.toString(year) + "-01-01";
-        String passportData = "{\"name\": \"MyName\", \"DateOfBirth\": \"" + dob
-                + "\", \"Nationality\": \"Dutch\", \"ExpirationDate\": \"2024-04-23\", \"Photo\": \"base64encodedPhoto\"}";
-        String travelData =
-                "{\"FlightNumber\": \"KL123\", \"Date\": \"2019-06-12\", \"Departure\": \"AMS\", \"DepartureCountry\": \"Netherlands\", \"Destination\": \"BRU\", \"DestinationCountry\": \"Belgium\", \"FlightBlue\": \"Silver\"}";
+        String passportData = Base64.getEncoder().encodeToString(("{\"name\": \"MyName\", \"DateOfBirth\": \"" + dob
+                + "\", \"Nationality\": \"Dutch\", \"ExpirationDate\": \"2024-04-23\", \"Photo\": \"base64encodedPhoto\"}").getBytes());
+        String travelData = Base64.getEncoder().encodeToString(
+                "{\"FlightNumber\": \"KL123\", \"Date\": \"2019-06-12\", \"Departure\": \"AMS\", \"DepartureCountry\": \"Netherlands\", \"Destination\": \"BRU\", \"DestinationCountry\": \"Belgium\", \"FlightBlue\": \"Silver\"}"
+                        .getBytes());
         Authorisation aC18 = new Authorisation().withClaimName(ClaimCodes.OlderEightteen.name()).withWho(Arrays.asList("KLM", "Transavia"))
                 .withWhere(Arrays.asList("AMS", "BRU")).withRole(Arrays.asList("Lounge", "Shop"));
         Authorisation aC21 = new Authorisation().withClaimName(ClaimCodes.OlderTwentyOne.name()).withWho(Arrays.asList("KLM2", "Transavia2"))
@@ -218,10 +222,11 @@ public class BackendServiceImplTest {
         Mockito.when(hlfInvoker.invokeChaincode(methodeCapture.capture(), argsCapture.capture())).thenReturn("bla");
         int year = LocalDate.now().getYear() - 17;
         String dob = Integer.toString(year) + "-01-01";
-        String passportData = "{\"name\": \"MyName\", \"DateOfBirth\": \"" + dob
-                + "\", \"Nationality\": \"Dutch\", \"ExpirationDate\": \"2024-04-23\", \"Photo\": \"base64encodedPhoto\"}";
-        String travelData =
-                "{\"FlightNumber\": \"KL123\", \"Date\": \"2019-06-12\", \"Departure\": \"AMS\", \"DepartureCountry\": \"Netherlands\", \"Destination\": \"BRU\", \"DestinationCountry\": \"Belgium\", \"FlightBlue\": \"Silver\"}";
+        String passportData = Base64.getEncoder().encodeToString(("{\"name\": \"MyName\", \"DateOfBirth\": \"" + dob
+                + "\", \"Nationality\": \"Dutch\", \"ExpirationDate\": \"2024-04-23\", \"Photo\": \"base64encodedPhoto\"}").getBytes());
+        String travelData = Base64.getEncoder().encodeToString(
+                "{\"FlightNumber\": \"KL123\", \"Date\": \"2019-06-12\", \"Departure\": \"AMS\", \"DepartureCountry\": \"Netherlands\", \"Destination\": \"BRU\", \"DestinationCountry\": \"Belgium\", \"FlightBlue\": \"Silver\"}"
+                        .getBytes());
         Authorisation aC21 = new Authorisation().withClaimName(ClaimCodes.OlderTwentyOne.name()).withWho(Arrays.asList("KLM2", "Transavia2"))
                 .withWhere(Arrays.asList("AMS2", "BRU2")).withRole(Arrays.asList("Lounge2", "Shop2"));
         List<Authorisation> authorisations = Arrays.asList(aC21);
@@ -252,10 +257,11 @@ public class BackendServiceImplTest {
         Mockito.when(hlfInvoker.invokeChaincode(methodeCapture.capture(), argsCapture.capture())).thenReturn("bla");
         int year = LocalDate.now().getYear() - 20;
         String dob = Integer.toString(year) + "-01-01";
-        String passportData = "{\"name\": \"MyName\", \"DateOfBirth\": \"" + dob
-                + "\", \"Nationality\": \"Dutch\", \"ExpirationDate\": \"2024-04-23\", \"Photo\": \"base64encodedPhoto\"}";
-        String travelData =
-                "{\"FlightNumber\": \"KL123\", \"Date\": \"2019-06-12\", \"Departure\": \"AMS\", \"DepartureCountry\": \"Netherlands\", \"Destination\": \"BRU\", \"DestinationCountry\": \"Belgium\", \"FlightBlue\": \"Silver\"}";
+        String passportData = Base64.getEncoder().encodeToString(("{\"name\": \"MyName\", \"DateOfBirth\": \"" + dob
+                + "\", \"Nationality\": \"Dutch\", \"ExpirationDate\": \"2024-04-23\", \"Photo\": \"base64encodedPhoto\"}").getBytes());
+        String travelData = Base64.getEncoder().encodeToString(
+                "{\"FlightNumber\": \"KL123\", \"Date\": \"2019-06-12\", \"Departure\": \"AMS\", \"DepartureCountry\": \"Netherlands\", \"Destination\": \"BRU\", \"DestinationCountry\": \"Belgium\", \"FlightBlue\": \"Silver\"}"
+                        .getBytes());
         Authorisation aC18 = new Authorisation().withClaimName(ClaimCodes.OlderEightteen.name()).withWho(Arrays.asList("KLM", "Transavia"))
                 .withWhere(Arrays.asList("AMS", "BRU")).withRole(Arrays.asList("Lounge", "Shop"));
         List<Authorisation> authorisations = Arrays.asList(aC18);
