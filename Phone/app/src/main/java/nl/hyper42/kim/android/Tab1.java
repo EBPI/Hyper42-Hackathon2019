@@ -112,10 +112,6 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 Log.e(TAG, "onFailure: ", t);
             }
         });
-        Toast.makeText(getContext(), "you choose button 2", Toast.LENGTH_SHORT).show();
-        Intent myIntent = new Intent(getActivity(), LoadTicket.class);
-//        myIntent.putExtra("key", value); //Optional parameters
-        Tab1.this.startActivity(myIntent);
     }
 
     private void onButtonOneClick(View view) {
@@ -141,7 +137,29 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         permissions[1]=messageReturned.getIntArray("2");
         permissions[2]=messageReturned.getIntArray("3");
         permissions[3]=messageReturned.getIntArray("4");;
+        processAndCreateClaims();
+    }
 
+    private void processAndCreateClaims(){
+        String[] roles = {"Airlines","Security","Customs","Shops","Lounge"};
+        ArrayList<ArrayList<String>> converted_permissions = new ArrayList<>();
+        for (int i=0;i<permissions.length;i++){
+            ArrayList<String> claim = new ArrayList<>();
+            for (int j=1;j<permissions[0].length;j++){
+                if(permissions[i][j]==1){
+                    claim.add(roles[j-1]);
+                }
+            }
+            converted_permissions.add(claim);
+        }
+        for (int i=0;i<converted_permissions.size();i++){
+            System.out.println("Claim "+i);
+            for(int j=0;j<converted_permissions.get(0).size();j++){
+                System.out.print(" Role "+j+" "+converted_permissions.get(i).get(j));
+            }
+            System.out.println();
+        }
+        createClaims(converted_permissions.get(0), converted_permissions.get(1), converted_permissions.get(2), converted_permissions.get(3));
     }
 
     private void initPermissions(){
