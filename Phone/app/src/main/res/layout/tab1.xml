@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_columnSpan="2"
-            android:layout_margin="5dp"
+            android:layout_marginBottom="5dp"
             android:text="Enrollment"
             android:textSize="30dp"
             android:textColor="@color/klm_blue"/>
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="First Name:"
-            android:textSize="24dp" />
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/textView11"
@@ -58,8 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="Walter"
-            
-            android:textSize="24dp" />
+
+            android:textSize="20dp" />
 
 
         <TextView
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="Last Name:"
-            android:textSize="24dp" />
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/textView15"
@@ -76,9 +76,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="Wright"
-            
-            android:textSize="24dp" />
 
+            android:textSize="20dp" />
 
 
         <TextView
@@ -87,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="Language"
-            android:textSize="24dp" />
+            android:textSize="20dp" />
 
 
         <TextView
@@ -96,8 +95,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="NL"
-            
-            android:textSize="24dp" />
+
+            android:textSize="20dp" />
 
 
         <TextView
@@ -106,7 +105,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="FlyingBlue level:"
-            android:textSize="24dp" />
+            android:textSize="20dp" />
 
 
         <TextView
@@ -115,8 +114,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="Gold"
-            
-            android:textSize="24dp" />
+
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/buttonScanPassport"
@@ -135,7 +134,7 @@
 
         <Button
             android:id="@+id/buttonLoadTicket"
-            android:layout_width="206dp"
+            android:layout_width="208dp"
             android:layout_height="wrap_content"
             android:layout_columnSpan="2"
             android:layout_gravity="center_horizontal"
@@ -148,7 +147,7 @@
 
         <Button
             android:id="@+id/buttonApproveClaims"
-            android:layout_width="wrap_content"
+            android:layout_width="208dp"
             android:layout_height="wrap_content"
             android:layout_columnSpan="2"
             android:layout_gravity="center_horizontal"

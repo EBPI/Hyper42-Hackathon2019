@@ -13,12 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         android:columnCount="2"
         android:gravity="center|center_vertical"
-        android:orientation="vertical"
-        android:rowCount="6"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:rowCount="7"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="10dp">
         <!--tools:layout_editor_absoluteX="10dp"-->
@@ -29,19 +26,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_columnSpan="2"
-            android:layout_margin="5dp"
+            android:layout_marginBottom="5dp"
             android:text="Passport Details"
             android:textColor="@color/klm_blue"
             android:textSize="30dp" />
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="176dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="Passport Nr:"
-            
-            android:textSize="24dp" />
+            android:text="Passport Number:"
+
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="8G76FG87"
+
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/textView11"
@@ -49,8 +55,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="First Name:"
-            
-            android:textSize="24dp" />
+
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="Walter"
+
+            android:textSize="20dp" />
 
 
         <TextView
@@ -59,18 +74,66 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="Last Name:"
-            
-            android:textSize="24dp" />
+
+            android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="Wright"
+
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:text="Date of Brith:"
-            
 
-            android:textSize="24dp" />
+
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="06.03.1981"
+
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="Citizenship:"
+
+
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="Netherlands"
+
+
+            android:textSize="20dp" />
+
+
+
+
+
+
+
+
+
 
         <Button
             android:id="@+id/button"
@@ -81,48 +144,9 @@
             android:background="@drawable/button_primary"
             android:text="Confirm"
             android:textColor="@color/klm_white"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"/>
         <!--NEXT LINE -->
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill_horizontal"
-            android:text="8G76FG87G02A"
-            
-            android:textSize="24dp" />
-
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill_horizontal"
-            android:text="Walter"
-            
-            android:textSize="24dp" />
-
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill_horizontal"
-            android:text="Wright"
-            
-            android:textSize="24dp" />
-
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill_horizontal"
-            android:text="06.03.1981"
-            
-            android:textSize="24dp" />
-
 
     </GridLayout>
 
