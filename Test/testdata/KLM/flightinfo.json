@@ -1,0 +1,794 @@
+[{
+    "individual": {
+        "gin": 400373351893,
+        "cin": 1220457623
+    },
+    "milesAndXPCounter": {
+        "labelMiles": "{#/milesAndXPCounter/milesAmount} Miles",
+        "milesAmount": 100001,
+        "xpCounters": [{
+            "labelXP": "{#/milesAndXPCounter/xpCounters[0]/xpAmount} UXP",
+            "xpAmount": 111,
+            "labelEndOfQualifyingPeriod": "End of qualification period: {#/milesAndXPCounter/xpCounters[0]/endOfQualifyingPeriod}",
+            "endOfQualifyingPeriod": "2020-12-31",
+            "ultimate": true
+        }],
+        "xpGlobals": [{
+            "type": "XP_TIER",
+            "amount": 3754,
+            "amountLabel": "{#/milesAndXPCounter/xpGlobals[0]/amount} XP",
+            "endDate": "2019-12-31",
+            "endDateLabel": "End of qualification period: {#/milesAndXPCounter/xpGlobals[0]/endDate}"
+        },
+        {
+            "type": "XP_ULTI",
+            "amount": 111,
+            "amountLabel": "{#/milesAndXPCounter/xpGlobals[1]/amount} UXP",
+            "endDate": "2020-12-31",
+            "endDateLabel": "End of qualification period: {#/milesAndXPCounter/xpGlobals[1]/endDate}"
+        }
+    ]
+    },
+    "transactions": {
+        "labelTransactions": "Activity history",
+        "labelDetails": "Details",
+        "labelClaim": "Claim missing Miles",
+        "moreTransactions": {
+            "rel": "More",
+            "href": "https://api.ute2.klm.com/travel/flyingblue/accounts/1020091423/transactions?channel=b2c&applicationcode=app&offset=101&size=100"
+        },
+        "transactionsList": [{
+            "transactionDate": "2019-03-31",
+            "activityDate": "2019-03-28",
+            "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+            "type": "Earn",
+            "subType": "Flight",
+            "description": "My Trip to {#/transactions/transactionsList[0]/finalDestination}",
+            "labelMiles": "+{#/transactions/transactionsList[0]/milesAmount} Miles",
+            "labelXP": "+{#/transactions/transactionsList[0]/xpAmount} XP",
+            "milesAmount": 840,
+            "xpAmount": 5,
+            "finalDestination": "Paris",
+            "xpActivity": [{
+                "type": "XP_TIER",
+                "amount": 5,
+                "amountLabel": "+{#/transactions/transactionsList[0]/xpActivity[0]/amount} XP"
+            },
+            {
+                "type": "XP_ULTI",
+                "amount": 5,
+                "amountLabel": "+{#/transactions/transactionsList[0]/xpActivity[1]/amount} UXP"
+            }
+        ],
+            "details": [{
+                "transactionDate": "2019-03-31",
+                "activityDate": "2019-03-28",
+                "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+                "origin": "AMS",
+                "destination": "CDG",
+                "description": "{#/transactions/transactionsList[0]/details[0]/complementaryDetailDescriptionData[0]} - {#/transactions/transactionsList[0]/details[0]/complementaryDetailDescriptionData[1]} {#/transactions/transactionsList[0]/details[0]/complementaryDetailDescriptionData[2]} Miles earned based on € spent",
+                "milesAmount": 840,
+                "xpAmount": 5,
+                "labelMiles": "+{#/transactions/transactionsList[0]/details[0]/milesAmount} Miles",
+                "labelXP": "+{#/transactions/transactionsList[0]/details[0]/xpAmount} XP",
+                "subType": "Flight",
+                "ultimateEligibility": true,
+                "xpActivityDetails": [{
+                    "type": "XP_TIER",
+                    "amount": 5,
+                    "amountLabel": "+{#/transactions/transactionsList[0]/details[0]/xpActivityDetails[0]/amount} XP"
+                },
+                {
+                    "type": "XP_ULTI",
+                    "amount": 5,
+                    "amountLabel": "+{#/transactions/transactionsList[0]/details[0]/xpActivityDetails[1]/amount} UXP"
+                }
+            ],
+                "complementaryDetailDescriptionData": [
+                    "AMS",
+                    "CDG",
+                    "KL1243"
+                ]
+            }]
+        },
+        {
+            "transactionDate": "2019-03-30",
+            "activityDate": "2019-03-27",
+            "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+            "type": "Earn",
+            "subType": "Flight",
+            "description": "My Trip to {#/transactions/transactionsList[1]/finalDestination}",
+            "labelMiles": "+{#/transactions/transactionsList[1]/milesAmount} Miles",
+            "labelXP": "+{#/transactions/transactionsList[1]/xpAmount} XP",
+            "milesAmount": 6520,
+            "xpAmount": 12,
+            "finalDestination": "Beijing",
+            "xpActivity": [{
+                "type": "XP_TIER",
+                "amount": 12,
+                "amountLabel": "+{#/transactions/transactionsList[1]/xpActivity[0]/amount} XP"
+            },
+            {
+                "type": "XP_ULTI",
+                "amount": 12,
+                "amountLabel": "+{#/transactions/transactionsList[1]/xpActivity[1]/amount} UXP"
+            }
+        ],
+            "details": [{
+                "transactionDate": "2019-03-30",
+                "activityDate": "2019-03-27",
+                "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+                "origin": "AMS",
+                "destination": "PEK",
+                "description": "{#/transactions/transactionsList[1]/details[0]/complementaryDetailDescriptionData[0]} - {#/transactions/transactionsList[1]/details[0]/complementaryDetailDescriptionData[1]} {#/transactions/transactionsList[1]/details[0]/complementaryDetailDescriptionData[2]} Miles earned based on € spent",
+                "milesAmount": 6520,
+                "xpAmount": 12,
+                "labelMiles": "+{#/transactions/transactionsList[1]/details[0]/milesAmount} Miles",
+                "labelXP": "+{#/transactions/transactionsList[1]/details[0]/xpAmount} XP",
+                "subType": "Flight",
+                "ultimateEligibility": true,
+                "xpActivityDetails": [{
+                    "type": "XP_TIER",
+                    "amount": 12,
+                    "amountLabel": "+{#/transactions/transactionsList[1]/details[0]/xpActivityDetails[0]/amount} XP"
+                },
+                {
+                    "type": "XP_ULTI",
+                    "amount": 12,
+                    "amountLabel": "+{#/transactions/transactionsList[1]/details[0]/xpActivityDetails[1]/amount} UXP"
+                }
+            ],
+                "complementaryDetailDescriptionData": [
+                    "AMS",
+                    "PEK",
+                    "KL0897"
+                ]
+            }]
+        },
+        {
+            "transactionDate": "2019-03-25",
+            "activityDate": "2019-03-22",
+            "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+            "type": "Earn",
+            "subType": "Flight",
+            "description": "My Trip to {#/transactions/transactionsList[2]/finalDestination}",
+            "labelMiles": "+{#/transactions/transactionsList[2]/milesAmount} Miles",
+            "labelXP": "+{#/transactions/transactionsList[2]/xpAmount} XP",
+            "milesAmount": 752,
+            "xpAmount": 5,
+            "finalDestination": "Barcelona",
+            "xpActivity": [{
+                "type": "XP_TIER",
+                "amount": 5,
+                "amountLabel": "+{#/transactions/transactionsList[2]/xpActivity[0]/amount} XP"
+            },
+            {
+                "type": "XP_ULTI",
+                "amount": 5,
+                "amountLabel": "+{#/transactions/transactionsList[2]/xpActivity[1]/amount} UXP"
+            }
+        ],
+            "details": [{
+                "transactionDate": "2019-03-25",
+                "activityDate": "2019-03-22",
+                "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+                "origin": "AMS",
+                "destination": "BCN",
+                "description": "{#/transactions/transactionsList[2]/details[0]/complementaryDetailDescriptionData[0]} - {#/transactions/transactionsList[2]/details[0]/complementaryDetailDescriptionData[1]} {#/transactions/transactionsList[2]/details[0]/complementaryDetailDescriptionData[2]} Miles earned based on € spent",
+                "milesAmount": 752,
+                "xpAmount": 5,
+                "labelMiles": "+{#/transactions/transactionsList[2]/details[0]/milesAmount} Miles",
+                "labelXP": "+{#/transactions/transactionsList[2]/details[0]/xpAmount} XP",
+                "subType": "Flight",
+                "ultimateEligibility": true,
+                "xpActivityDetails": [{
+                    "type": "XP_TIER",
+                    "amount": 5,
+                    "amountLabel": "+{#/transactions/transactionsList[2]/details[0]/xpActivityDetails[0]/amount} XP"
+                },
+                {
+                    "type": "XP_ULTI",
+                    "amount": 5,
+                    "amountLabel": "+{#/transactions/transactionsList[2]/details[0]/xpActivityDetails[1]/amount} UXP"
+                }
+            ],
+                "complementaryDetailDescriptionData": [
+                    "AMS",
+                    "BCN",
+                    "KL1669"
+                ]
+            }]
+        },
+        {
+            "transactionDate": "2019-03-24",
+            "activityDate": "2019-03-21",
+            "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+            "type": "Earn",
+            "subType": "Flight",
+            "description": "My Trip to {#/transactions/transactionsList[3]/finalDestination}",
+            "labelMiles": "+{#/transactions/transactionsList[3]/milesAmount} Miles",
+            "labelXP": "+{#/transactions/transactionsList[3]/xpAmount} XP",
+            "milesAmount": 752,
+            "xpAmount": 5,
+            "finalDestination": "Barcelona",
+            "xpActivity": [{
+                "type": "XP_TIER",
+                "amount": 5,
+                "amountLabel": "+{#/transactions/transactionsList[3]/xpActivity[0]/amount} XP"
+            },
+            {
+                "type": "XP_ULTI",
+                "amount": 5,
+                "amountLabel": "+{#/transactions/transactionsList[3]/xpActivity[1]/amount} UXP"
+            }
+        ],
+            "details": [{
+                "transactionDate": "2019-03-24",
+                "activityDate": "2019-03-21",
+                "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+                "origin": "AMS",
+                "destination": "BCN",
+                "description": "{#/transactions/transactionsList[3]/details[0]/complementaryDetailDescriptionData[0]} - {#/transactions/transactionsList[3]/details[0]/complementaryDetailDescriptionData[1]} {#/transactions/transactionsList[3]/details[0]/complementaryDetailDescriptionData[2]} Miles earned based on € spent",
+                "milesAmount": 752,
+                "xpAmount": 5,
+                "labelMiles": "+{#/transactions/transactionsList[3]/details[0]/milesAmount} Miles",
+                "labelXP": "+{#/transactions/transactionsList[3]/details[0]/xpAmount} XP",
+                "subType": "Flight",
+                "ultimateEligibility": true,
+                "xpActivityDetails": [{
+                    "type": "XP_TIER",
+                    "amount": 5,
+                    "amountLabel": "+{#/transactions/transactionsList[3]/details[0]/xpActivityDetails[0]/amount} XP"
+                },
+                {
+                    "type": "XP_ULTI",
+                    "amount": 5,
+                    "amountLabel": "+{#/transactions/transactionsList[3]/details[0]/xpActivityDetails[1]/amount} UXP"
+                }
+            ],
+                "complementaryDetailDescriptionData": [
+                    "AMS",
+                    "BCN",
+                    "KL1669"
+                ]
+            }]
+        },
+        {
+            "transactionDate": "2019-03-18",
+            "activityDate": "2019-03-15",
+            "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+            "type": "Earn",
+            "subType": "Flight",
+            "description": "My Trip to {#/transactions/transactionsList[4]/finalDestination}",
+            "labelMiles": "+{#/transactions/transactionsList[4]/milesAmount} Miles",
+            "labelXP": "+{#/transactions/transactionsList[4]/xpAmount} XP",
+            "milesAmount": 7120,
+            "xpAmount": 12,
+            "finalDestination": "Beijing",
+            "xpActivity": [{
+                "type": "XP_TIER",
+                "amount": 12,
+                "amountLabel": "+{#/transactions/transactionsList[4]/xpActivity[0]/amount} XP"
+            },
+            {
+                "type": "XP_ULTI",
+                "amount": 12,
+                "amountLabel": "+{#/transactions/transactionsList[4]/xpActivity[1]/amount} UXP"
+            }
+        ],
+            "details": [{
+                "transactionDate": "2019-03-18",
+                "activityDate": "2019-03-15",
+                "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+                "origin": "AMS",
+                "destination": "PEK",
+                "description": "{#/transactions/transactionsList[4]/details[0]/complementaryDetailDescriptionData[0]} - {#/transactions/transactionsList[4]/details[0]/complementaryDetailDescriptionData[1]} {#/transactions/transactionsList[4]/details[0]/complementaryDetailDescriptionData[2]} Miles earned based on € spent",
+                "milesAmount": 7120,
+                "xpAmount": 12,
+                "labelMiles": "+{#/transactions/transactionsList[4]/details[0]/milesAmount} Miles",
+                "labelXP": "+{#/transactions/transactionsList[4]/details[0]/xpAmount} XP",
+                "subType": "Flight",
+                "ultimateEligibility": true,
+                "xpActivityDetails": [{
+                    "type": "XP_TIER",
+                    "amount": 12,
+                    "amountLabel": "+{#/transactions/transactionsList[4]/details[0]/xpActivityDetails[0]/amount} XP"
+                },
+                {
+                    "type": "XP_ULTI",
+                    "amount": 12,
+                    "amountLabel": "+{#/transactions/transactionsList[4]/details[0]/xpActivityDetails[1]/amount} UXP"
+                }
+            ],
+                "complementaryDetailDescriptionData": [
+                    "AMS",
+                    "PEK",
+                    "KL0897"
+                ]
+            }]
+        },
+        {
+            "transactionDate": "2019-02-04",
+            "activityDate": "2019-01-25",
+            "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+            "type": "Earn",
+            "subType": "Flight",
+            "description": "My Trip to {#/transactions/transactionsList[5]/finalDestination}",
+            "labelMiles": "+{#/transactions/transactionsList[5]/milesAmount} Miles",
+            "labelXP": "+{#/transactions/transactionsList[5]/xpAmount} XP",
+            "milesAmount": 23778,
+            "xpAmount": 72,
+            "finalDestination": "Santiago de Chile",
+            "xpActivity": [{
+                "type": "XP_TIER",
+                "amount": 72,
+                "amountLabel": "+{#/transactions/transactionsList[5]/xpActivity[0]/amount} XP"
+            },
+            {
+                "type": "XP_ULTI",
+                "amount": 72,
+                "amountLabel": "+{#/transactions/transactionsList[5]/xpActivity[1]/amount} UXP"
+            }
+        ],
+            "details": [{
+                "transactionDate": "2019-01-27",
+                "activityDate": "2019-01-25",
+                "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+                "origin": "LIM",
+                "destination": "CDG",
+                "description": "{#/transactions/transactionsList[5]/details[0]/complementaryDetailDescriptionData[0]} - {#/transactions/transactionsList[5]/details[0]/complementaryDetailDescriptionData[1]} {#/transactions/transactionsList[5]/details[0]/complementaryDetailDescriptionData[2]} Miles earned based on € spent",
+                "milesAmount": 13258,
+                "xpAmount": 36,
+                "labelMiles": "+{#/transactions/transactionsList[5]/details[0]/milesAmount} Miles",
+                "labelXP": "+{#/transactions/transactionsList[5]/details[0]/xpAmount} XP",
+                "subType": "Flight",
+                "ultimateEligibility": true,
+                "xpActivityDetails": [{
+                    "type": "XP_TIER",
+                    "amount": 36,
+                    "amountLabel": "+{#/transactions/transactionsList[5]/details[0]/xpActivityDetails[0]/amount} XP"
+                },
+                {
+                    "type": "XP_ULTI",
+                    "amount": 36,
+                    "amountLabel": "+{#/transactions/transactionsList[5]/details[0]/xpActivityDetails[1]/amount} UXP"
+                }
+            ],
+                "complementaryDetailDescriptionData": [
+                    "LIM",
+                    "CDG",
+                    "AF0483"
+                ]
+            },
+            {
+                "transactionDate": "2019-02-04",
+                "activityDate": "2019-02-02",
+                "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+                "origin": "CDG",
+                "destination": "SCL",
+                "description": "{#/transactions/transactionsList[5]/details[1]/complementaryDetailDescriptionData[0]} - {#/transactions/transactionsList[5]/details[1]/complementaryDetailDescriptionData[1]} {#/transactions/transactionsList[5]/details[1]/complementaryDetailDescriptionData[2]} Miles earned based on € spent",
+                "milesAmount": 10520,
+                "xpAmount": 36,
+                "labelMiles": "+{#/transactions/transactionsList[5]/details[1]/milesAmount} Miles",
+                "labelXP": "+{#/transactions/transactionsList[5]/details[1]/xpAmount} XP",
+                "subType": "Flight",
+                "ultimateEligibility": true,
+                "xpActivityDetails": [{
+                    "type": "XP_TIER",
+                    "amount": 36,
+                    "amountLabel": "+{#/transactions/transactionsList[5]/details[1]/xpActivityDetails[0]/amount} XP"
+                },
+                {
+                    "type": "XP_ULTI",
+                    "amount": 36,
+                    "amountLabel": "+{#/transactions/transactionsList[5]/details[1]/xpActivityDetails[1]/amount} UXP"
+                }
+            ],
+                "complementaryDetailDescriptionData": [
+                    "CDG",
+                    "SCL",
+                    "AF0406"
+                ]
+            }
+        ]
+        }
+    ]
+}
+},
+{
+    "individual": {
+        "gin": 400132891725,
+        "cin": 1221348959
+    },
+    "milesAndXPCounter": {
+        "labelMiles": "{#/milesAndXPCounter/milesAmount} Miles",
+        "milesAmount": 100001,
+        "xpCounters": [{
+            "labelXP": "{#/milesAndXPCounter/xpCounters[0]/xpAmount} UXP",
+            "xpAmount": 111,
+            "labelEndOfQualifyingPeriod": "End of qualification period: {#/milesAndXPCounter/xpCounters[0]/endOfQualifyingPeriod}",
+            "endOfQualifyingPeriod": "2020-12-31",
+            "ultimate": true
+        }],
+        "xpGlobals": [{
+            "type": "XP_TIER",
+            "amount": 3754,
+            "amountLabel": "{#/milesAndXPCounter/xpGlobals[0]/amount} XP",
+            "endDate": "2019-12-31",
+            "endDateLabel": "End of qualification period: {#/milesAndXPCounter/xpGlobals[0]/endDate}"
+        },
+        {
+            "type": "XP_ULTI",
+            "amount": 111,
+            "amountLabel": "{#/milesAndXPCounter/xpGlobals[1]/amount} UXP",
+            "endDate": "2020-12-31",
+            "endDateLabel": "End of qualification period: {#/milesAndXPCounter/xpGlobals[1]/endDate}"
+        }
+    ]
+    },
+    "transactions": {
+        "labelTransactions": "Activity history",
+        "labelDetails": "Details",
+        "labelClaim": "Claim missing Miles",
+        "moreTransactions": {
+            "rel": "More",
+            "href": "https://api.ute2.klm.com/travel/flyingblue/accounts/1020091423/transactions?channel=b2c&applicationcode=app&offset=101&size=100"
+        },
+        "transactionsList": [{
+            "transactionDate": "2019-03-31",
+            "activityDate": "2019-03-28",
+            "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+            "type": "Earn",
+            "subType": "Flight",
+            "description": "My Trip to {#/transactions/transactionsList[0]/finalDestination}",
+            "labelMiles": "+{#/transactions/transactionsList[0]/milesAmount} Miles",
+            "labelXP": "+{#/transactions/transactionsList[0]/xpAmount} XP",
+            "milesAmount": 840,
+            "xpAmount": 5,
+            "finalDestination": "Paris",
+            "xpActivity": [{
+                "type": "XP_TIER",
+                "amount": 5,
+                "amountLabel": "+{#/transactions/transactionsList[0]/xpActivity[0]/amount} XP"
+            },
+            {
+                "type": "XP_ULTI",
+                "amount": 5,
+                "amountLabel": "+{#/transactions/transactionsList[0]/xpActivity[1]/amount} UXP"
+            }
+        ],
+            "details": [{
+                "transactionDate": "2019-03-31",
+                "activityDate": "2019-03-28",
+                "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+                "origin": "AMS",
+                "destination": "CDG",
+                "description": "{#/transactions/transactionsList[0]/details[0]/complementaryDetailDescriptionData[0]} - {#/transactions/transactionsList[0]/details[0]/complementaryDetailDescriptionData[1]} {#/transactions/transactionsList[0]/details[0]/complementaryDetailDescriptionData[2]} Miles earned based on € spent",
+                "milesAmount": 840,
+                "xpAmount": 5,
+                "labelMiles": "+{#/transactions/transactionsList[0]/details[0]/milesAmount} Miles",
+                "labelXP": "+{#/transactions/transactionsList[0]/details[0]/xpAmount} XP",
+                "subType": "Flight",
+                "ultimateEligibility": true,
+                "xpActivityDetails": [{
+                    "type": "XP_TIER",
+                    "amount": 5,
+                    "amountLabel": "+{#/transactions/transactionsList[0]/details[0]/xpActivityDetails[0]/amount} XP"
+                },
+                {
+                    "type": "XP_ULTI",
+                    "amount": 5,
+                    "amountLabel": "+{#/transactions/transactionsList[0]/details[0]/xpActivityDetails[1]/amount} UXP"
+                }
+            ],
+                "complementaryDetailDescriptionData": [
+                    "AMS",
+                    "CDG",
+                    "KL1243"
+                ]
+            }]
+        },
+        {
+            "transactionDate": "2019-03-30",
+            "activityDate": "2019-03-27",
+            "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+            "type": "Earn",
+            "subType": "Flight",
+            "description": "My Trip to {#/transactions/transactionsList[1]/finalDestination}",
+            "labelMiles": "+{#/transactions/transactionsList[1]/milesAmount} Miles",
+            "labelXP": "+{#/transactions/transactionsList[1]/xpAmount} XP",
+            "milesAmount": 6520,
+            "xpAmount": 12,
+            "finalDestination": "Beijing",
+            "xpActivity": [{
+                "type": "XP_TIER",
+                "amount": 12,
+                "amountLabel": "+{#/transactions/transactionsList[1]/xpActivity[0]/amount} XP"
+            },
+            {
+                "type": "XP_ULTI",
+                "amount": 12,
+                "amountLabel": "+{#/transactions/transactionsList[1]/xpActivity[1]/amount} UXP"
+            }
+        ],
+            "details": [{
+                "transactionDate": "2019-03-30",
+                "activityDate": "2019-03-27",
+                "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+                "origin": "AMS",
+                "destination": "PEK",
+                "description": "{#/transactions/transactionsList[1]/details[0]/complementaryDetailDescriptionData[0]} - {#/transactions/transactionsList[1]/details[0]/complementaryDetailDescriptionData[1]} {#/transactions/transactionsList[1]/details[0]/complementaryDetailDescriptionData[2]} Miles earned based on € spent",
+                "milesAmount": 6520,
+                "xpAmount": 12,
+                "labelMiles": "+{#/transactions/transactionsList[1]/details[0]/milesAmount} Miles",
+                "labelXP": "+{#/transactions/transactionsList[1]/details[0]/xpAmount} XP",
+                "subType": "Flight",
+                "ultimateEligibility": true,
+                "xpActivityDetails": [{
+                    "type": "XP_TIER",
+                    "amount": 12,
+                    "amountLabel": "+{#/transactions/transactionsList[1]/details[0]/xpActivityDetails[0]/amount} XP"
+                },
+                {
+                    "type": "XP_ULTI",
+                    "amount": 12,
+                    "amountLabel": "+{#/transactions/transactionsList[1]/details[0]/xpActivityDetails[1]/amount} UXP"
+                }
+            ],
+                "complementaryDetailDescriptionData": [
+                    "AMS",
+                    "PEK",
+                    "KL0897"
+                ]
+            }]
+        },
+        {
+            "transactionDate": "2019-03-25",
+            "activityDate": "2019-03-22",
+            "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+            "type": "Earn",
+            "subType": "Flight",
+            "description": "My Trip to {#/transactions/transactionsList[2]/finalDestination}",
+            "labelMiles": "+{#/transactions/transactionsList[2]/milesAmount} Miles",
+            "labelXP": "+{#/transactions/transactionsList[2]/xpAmount} XP",
+            "milesAmount": 752,
+            "xpAmount": 5,
+            "finalDestination": "Barcelona",
+            "xpActivity": [{
+                "type": "XP_TIER",
+                "amount": 5,
+                "amountLabel": "+{#/transactions/transactionsList[2]/xpActivity[0]/amount} XP"
+            },
+            {
+                "type": "XP_ULTI",
+                "amount": 5,
+                "amountLabel": "+{#/transactions/transactionsList[2]/xpActivity[1]/amount} UXP"
+            }
+        ],
+            "details": [{
+                "transactionDate": "2019-03-25",
+                "activityDate": "2019-03-22",
+                "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+                "origin": "AMS",
+                "destination": "BCN",
+                "description": "{#/transactions/transactionsList[2]/details[0]/complementaryDetailDescriptionData[0]} - {#/transactions/transactionsList[2]/details[0]/complementaryDetailDescriptionData[1]} {#/transactions/transactionsList[2]/details[0]/complementaryDetailDescriptionData[2]} Miles earned based on € spent",
+                "milesAmount": 752,
+                "xpAmount": 5,
+                "labelMiles": "+{#/transactions/transactionsList[2]/details[0]/milesAmount} Miles",
+                "labelXP": "+{#/transactions/transactionsList[2]/details[0]/xpAmount} XP",
+                "subType": "Flight",
+                "ultimateEligibility": true,
+                "xpActivityDetails": [{
+                    "type": "XP_TIER",
+                    "amount": 5,
+                    "amountLabel": "+{#/transactions/transactionsList[2]/details[0]/xpActivityDetails[0]/amount} XP"
+                },
+                {
+                    "type": "XP_ULTI",
+                    "amount": 5,
+                    "amountLabel": "+{#/transactions/transactionsList[2]/details[0]/xpActivityDetails[1]/amount} UXP"
+                }
+            ],
+                "complementaryDetailDescriptionData": [
+                    "AMS",
+                    "BCN",
+                    "KL1669"
+                ]
+            }]
+        },
+        {
+            "transactionDate": "2019-03-24",
+            "activityDate": "2019-03-21",
+            "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+            "type": "Earn",
+            "subType": "Flight",
+            "description": "My Trip to {#/transactions/transactionsList[3]/finalDestination}",
+            "labelMiles": "+{#/transactions/transactionsList[3]/milesAmount} Miles",
+            "labelXP": "+{#/transactions/transactionsList[3]/xpAmount} XP",
+            "milesAmount": 752,
+            "xpAmount": 5,
+            "finalDestination": "Barcelona",
+            "xpActivity": [{
+                "type": "XP_TIER",
+                "amount": 5,
+                "amountLabel": "+{#/transactions/transactionsList[3]/xpActivity[0]/amount} XP"
+            },
+            {
+                "type": "XP_ULTI",
+                "amount": 5,
+                "amountLabel": "+{#/transactions/transactionsList[3]/xpActivity[1]/amount} UXP"
+            }
+        ],
+            "details": [{
+                "transactionDate": "2019-03-24",
+                "activityDate": "2019-03-21",
+                "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+                "origin": "AMS",
+                "destination": "BCN",
+                "description": "{#/transactions/transactionsList[3]/details[0]/complementaryDetailDescriptionData[0]} - {#/transactions/transactionsList[3]/details[0]/complementaryDetailDescriptionData[1]} {#/transactions/transactionsList[3]/details[0]/complementaryDetailDescriptionData[2]} Miles earned based on € spent",
+                "milesAmount": 752,
+                "xpAmount": 5,
+                "labelMiles": "+{#/transactions/transactionsList[3]/details[0]/milesAmount} Miles",
+                "labelXP": "+{#/transactions/transactionsList[3]/details[0]/xpAmount} XP",
+                "subType": "Flight",
+                "ultimateEligibility": true,
+                "xpActivityDetails": [{
+                    "type": "XP_TIER",
+                    "amount": 5,
+                    "amountLabel": "+{#/transactions/transactionsList[3]/details[0]/xpActivityDetails[0]/amount} XP"
+                },
+                {
+                    "type": "XP_ULTI",
+                    "amount": 5,
+                    "amountLabel": "+{#/transactions/transactionsList[3]/details[0]/xpActivityDetails[1]/amount} UXP"
+                }
+            ],
+                "complementaryDetailDescriptionData": [
+                    "AMS",
+                    "BCN",
+                    "KL1669"
+                ]
+            }]
+        },
+        {
+            "transactionDate": "2019-03-18",
+            "activityDate": "2019-03-15",
+            "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+            "type": "Earn",
+            "subType": "Flight",
+            "description": "My Trip to {#/transactions/transactionsList[4]/finalDestination}",
+            "labelMiles": "+{#/transactions/transactionsList[4]/milesAmount} Miles",
+            "labelXP": "+{#/transactions/transactionsList[4]/xpAmount} XP",
+            "milesAmount": 7120,
+            "xpAmount": 12,
+            "finalDestination": "Beijing",
+            "xpActivity": [{
+                "type": "XP_TIER",
+                "amount": 12,
+                "amountLabel": "+{#/transactions/transactionsList[4]/xpActivity[0]/amount} XP"
+            },
+            {
+                "type": "XP_ULTI",
+                "amount": 12,
+                "amountLabel": "+{#/transactions/transactionsList[4]/xpActivity[1]/amount} UXP"
+            }
+        ],
+            "details": [{
+                "transactionDate": "2019-03-18",
+                "activityDate": "2019-03-15",
+                "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+                "origin": "AMS",
+                "destination": "PEK",
+                "description": "{#/transactions/transactionsList[4]/details[0]/complementaryDetailDescriptionData[0]} - {#/transactions/transactionsList[4]/details[0]/complementaryDetailDescriptionData[1]} {#/transactions/transactionsList[4]/details[0]/complementaryDetailDescriptionData[2]} Miles earned based on € spent",
+                "milesAmount": 7120,
+                "xpAmount": 12,
+                "labelMiles": "+{#/transactions/transactionsList[4]/details[0]/milesAmount} Miles",
+                "labelXP": "+{#/transactions/transactionsList[4]/details[0]/xpAmount} XP",
+                "subType": "Flight",
+                "ultimateEligibility": true,
+                "xpActivityDetails": [{
+                    "type": "XP_TIER",
+                    "amount": 12,
+                    "amountLabel": "+{#/transactions/transactionsList[4]/details[0]/xpActivityDetails[0]/amount} XP"
+                },
+                {
+                    "type": "XP_ULTI",
+                    "amount": 12,
+                    "amountLabel": "+{#/transactions/transactionsList[4]/details[0]/xpActivityDetails[1]/amount} UXP"
+                }
+            ],
+                "complementaryDetailDescriptionData": [
+                    "AMS",
+                    "PEK",
+                    "KL0897"
+                ]
+            }]
+        },
+        {
+            "transactionDate": "2019-02-04",
+            "activityDate": "2019-01-25",
+            "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+            "type": "Earn",
+            "subType": "Flight",
+            "description": "My Trip to {#/transactions/transactionsList[5]/finalDestination}",
+            "labelMiles": "+{#/transactions/transactionsList[5]/milesAmount} Miles",
+            "labelXP": "+{#/transactions/transactionsList[5]/xpAmount} XP",
+            "milesAmount": 23778,
+            "xpAmount": 72,
+            "finalDestination": "Santiago de Chile",
+            "xpActivity": [{
+                "type": "XP_TIER",
+                "amount": 72,
+                "amountLabel": "+{#/transactions/transactionsList[5]/xpActivity[0]/amount} XP"
+            },
+            {
+                "type": "XP_ULTI",
+                "amount": 72,
+                "amountLabel": "+{#/transactions/transactionsList[5]/xpActivity[1]/amount} UXP"
+            }
+        ],
+            "details": [{
+                "transactionDate": "2019-01-27",
+                "activityDate": "2019-01-25",
+                "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+                "origin": "LIM",
+                "destination": "CDG",
+                "description": "{#/transactions/transactionsList[5]/details[0]/complementaryDetailDescriptionData[0]} - {#/transactions/transactionsList[5]/details[0]/complementaryDetailDescriptionData[1]} {#/transactions/transactionsList[5]/details[0]/complementaryDetailDescriptionData[2]} Miles earned based on € spent",
+                "milesAmount": 13258,
+                "xpAmount": 36,
+                "labelMiles": "+{#/transactions/transactionsList[5]/details[0]/milesAmount} Miles",
+                "labelXP": "+{#/transactions/transactionsList[5]/details[0]/xpAmount} XP",
+                "subType": "Flight",
+                "ultimateEligibility": true,
+                "xpActivityDetails": [{
+                    "type": "XP_TIER",
+                    "amount": 36,
+                    "amountLabel": "+{#/transactions/transactionsList[5]/details[0]/xpActivityDetails[0]/amount} XP"
+                },
+                {
+                    "type": "XP_ULTI",
+                    "amount": 36,
+                    "amountLabel": "+{#/transactions/transactionsList[5]/details[0]/xpActivityDetails[1]/amount} UXP"
+                }
+            ],
+                "complementaryDetailDescriptionData": [
+                    "LIM",
+                    "CDG",
+                    "AF0483"
+                ]
+            },
+            {
+                "transactionDate": "2019-02-04",
+                "activityDate": "2019-02-02",
+                "iconURL": "https://img.static-fb.com/images/media/EAB48D10-4B9D-4E4B-9AC10451F0B80876",
+                "origin": "CDG",
+                "destination": "SCL",
+                "description": "{#/transactions/transactionsList[5]/details[1]/complementaryDetailDescriptionData[0]} - {#/transactions/transactionsList[5]/details[1]/complementaryDetailDescriptionData[1]} {#/transactions/transactionsList[5]/details[1]/complementaryDetailDescriptionData[2]} Miles earned based on € spent",
+                "milesAmount": 10520,
+                "xpAmount": 36,
+                "labelMiles": "+{#/transactions/transactionsList[5]/details[1]/milesAmount} Miles",
+                "labelXP": "+{#/transactions/transactionsList[5]/details[1]/xpAmount} XP",
+                "subType": "Flight",
+                "ultimateEligibility": true,
+                "xpActivityDetails": [{
+                    "type": "XP_TIER",
+                    "amount": 36,
+                    "amountLabel": "+{#/transactions/transactionsList[5]/details[1]/xpActivityDetails[0]/amount} XP"
+                },
+                {
+                    "type": "XP_ULTI",
+                    "amount": 36,
+                    "amountLabel": "+{#/transactions/transactionsList[5]/details[1]/xpActivityDetails[1]/amount} UXP"
+                }
+            ],
+                "complementaryDetailDescriptionData": [
+                    "CDG",
+                    "SCL",
+                    "AF0406"
+                ]
+            }
+        ]
+        }
+    ]
+}
+}]

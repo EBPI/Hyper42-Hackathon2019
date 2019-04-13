@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
 
         tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.tab1)));
         tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.tab2)));
-        tabLayout.addTab(tabLayout.newTab().setText("Third"));
 
         viewPager = findViewById(R.id.viewpager);
 
