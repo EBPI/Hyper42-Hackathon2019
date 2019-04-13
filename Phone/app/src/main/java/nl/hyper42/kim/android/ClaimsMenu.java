@@ -16,7 +16,7 @@ public class ClaimsMenu extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_claims_menu);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbarComplaintsMenu);
         setSupportActionBar(toolbar);
         Intent intent = getIntent();
         Bundle messageReturned = intent.getBundleExtra("permissions");

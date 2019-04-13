@@ -11,18 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ClaimsMenu"></activity>
+        <activity
+            android:name=".ClaimsMenu"
+            android:label="@string/title_activity_claims_list"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoadTicket"
             android:label="@string/title_activity_load_ticket"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Passport"
-            android:label="@string/title_activity_passport"
+            android:label="@string/title_activity_load_ticket"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ClaimIndDetails"
-            android:label="@string/title_activity_passport"
+            android:label="@string/title_activity_claims_details"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>

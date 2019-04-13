@@ -4,4 +4,7 @@
     <string name="tab2">At Airport</string>
     <string name="title_activity_passport">Passport</string>
     <string name="title_activity_load_ticket">LoadTicket</string>
+    <string name="title_activity_claims_list">Claims list</string>
+    <string name="title_activity_claims_details">Claims details</string>
+
 </resources>
