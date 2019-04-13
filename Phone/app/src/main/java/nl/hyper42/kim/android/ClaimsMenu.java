@@ -11,7 +11,7 @@ import android.widget.TextView;
  * Created by Rodrigo on 13/04/2018.
  */
 public class ClaimsMenu extends AppCompatActivity implements View.OnClickListener {
-    static final int RESULT_CODE = 17;
+    static final int RESULT_CODE = 0;
     int[][] permissions ;
     String[] roles = {"Airlines","Security","Customs","Shops","Lounge"};
     @Override
@@ -22,11 +22,7 @@ public class ClaimsMenu extends AppCompatActivity implements View.OnClickListene
         setSupportActionBar(toolbar);
         Intent intent = getIntent();
         Bundle messageReturned = intent.getBundleExtra("permissions");
-        permissions = new int[4][6];
-        permissions[0]=messageReturned.getIntArray("1");
-        permissions[1]=messageReturned.getIntArray("2");
-        permissions[2]=messageReturned.getIntArray("3");
-        permissions[3]=messageReturned.getIntArray("4");;
+        onCreateInitPermissions(messageReturned);
         findViewById(R.id.claim_1).setOnClickListener(this);
         findViewById(R.id.claim_2).setOnClickListener(this);
         findViewById(R.id.claim_3).setOnClickListener(this);
@@ -36,17 +32,30 @@ public class ClaimsMenu extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onClick(View v) {
                 Intent intentWithResult = new Intent();
-                Bundle permissionsBundle = new Bundle();
-                permissionsBundle.putIntArray("1",permissions[0]);
-                permissionsBundle.putIntArray("2",permissions[1]);
-                permissionsBundle.putIntArray("3",permissions[2]);
-                permissionsBundle.putIntArray("4",permissions[3]);
-                intentWithResult.putExtra("message_return", permissionsBundle);
-                setResult(17,intentWithResult);
+                intentWithResult.putExtra("message_return", onCreateInitBundle());
+                setResult(0,intentWithResult);
                 finish();
             }
         });
     }
+
+    private Bundle onCreateInitBundle() {
+        Bundle permissionsBundle = new Bundle();
+        permissionsBundle.putIntArray("1",permissions[0]);
+        permissionsBundle.putIntArray("2",permissions[1]);
+        permissionsBundle.putIntArray("3",permissions[2]);
+        permissionsBundle.putIntArray("4",permissions[3]);
+        return permissionsBundle;
+    }
+
+    private void onCreateInitPermissions(Bundle messageReturned) {
+        permissions = new int[4][6];
+        permissions[0]=messageReturned.getIntArray("1");
+        permissions[1]=messageReturned.getIntArray("2");
+        permissions[2]=messageReturned.getIntArray("3");
+        permissions[3]=messageReturned.getIntArray("4");
+    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -71,7 +80,6 @@ public class ClaimsMenu extends AppCompatActivity implements View.OnClickListene
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(data==null)return;
         int[] messageReturned = data.getIntArrayExtra("message_return");
 //        System.out.println("Result code = " + resultCode);
 //        System.out.println(messageReturned.toString());
