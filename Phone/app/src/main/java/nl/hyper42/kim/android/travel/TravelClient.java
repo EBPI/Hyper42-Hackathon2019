@@ -1,6 +1,5 @@
 package nl.hyper42.kim.android.travel;
 
-import nl.hyper42.kim.android.info.InfoService;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 

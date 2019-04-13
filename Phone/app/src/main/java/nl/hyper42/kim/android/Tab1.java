@@ -1,24 +1,20 @@
 package nl.hyper42.kim.android;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import nl.hyper42.kim.android.generated.info.FlightInfo;
 import nl.hyper42.kim.android.generated.travel.Authorisation;
 import nl.hyper42.kim.android.generated.travel.TravelDataRequest;
 import nl.hyper42.kim.android.generated.travel.TravelDataResponse;
-import nl.hyper42.kim.android.info.InfoClient;
 import nl.hyper42.kim.android.travel.TravelClient;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -63,7 +59,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
 
     }
 
-    public void createClaims (List olderEightteenRoles,  List euCitizenroles, List outsideEURoles, List flyingBlueLevelRoles) {
+    public void createClaims (List<String> olderEightteenRoles,  List<String> euCitizenroles, List<String> outsideEURoles, List<String> flyingBlueLevelRoles) {
         String passportData = "{\"name\": \"MyName\", \"DateOfBirth\": \"1998-04-12\", \"Nationality\": \"Netherlands\", \"ExpirationDate\": \"2024-04-23\", \"Photo\": \"base64encodedPhoto\"}";
         String travelData = "{\"FlightNumber\": \"KL123\", \"Date\": \"2019-06-12\", \"Departure\": \"AMS\", \"DepartureCountry\": \"Netherlands\", \"Destination\": \"BRU\", \"DestinationCountry\": \"Belgium\", \"FlightBlue\": \"Silver\"}";
 

@@ -124,7 +124,7 @@ func CheckHash(APIstub shim.ChaincodeStubInterface, args []string) sc.Response {
 }
 
 func RegisterHash(APIstub shim.ChaincodeStubInterface, args []string) sc.Response {
-	amountOfArguments := 4
+	amountOfArguments := 3
 	if len(args) < amountOfArguments {
 		return shim.Error(fmt.Sprintf("Incorrect number of arguments. Expecting at least %d.", amountOfArguments))
 	}

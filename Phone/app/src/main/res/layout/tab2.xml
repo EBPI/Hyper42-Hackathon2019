@@ -3,13 +3,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:columnCount="2"
+        android:gravity="center|center_vertical"
+
+        android:rowCount="6">
+
     <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_marginBottom="5dp"
+        android:text="At the Airport"
+        android:textSize="30dp"
+        android:textColor="@color/klm_blue"/>
+
+    <TextView
+        android:id="@+id/tab2TextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Tab 2"
-        android:textColor="#000"
-        android:textSize="30dp"
-        android:textStyle="bold|normal" />
+        android:layout_gravity="fill_horizontal"
+        android:text="Start your trip"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/buttonShareClaims"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_primary"
+        android:paddingHorizontal="32dp"
+        android:text="Share Claims"
+        android:textColor="@color/klm_white"
+        android:textSize="20dp" />
+    </GridLayout>
+
 </RelativeLayout>
