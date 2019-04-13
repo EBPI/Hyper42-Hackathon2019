@@ -7,7 +7,7 @@ public class TravelClient {
     /**
      * URLS
      */
-    private static final String ROOT_URL = "http://localhost/";
+    private static final String ROOT_URL = "http://172.16.162.30:7080/";
 
     /**
      * Get Retrofit Instance
