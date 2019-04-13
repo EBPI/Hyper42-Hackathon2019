@@ -158,11 +158,12 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         permissionsBundle.putIntArray("3", permissions[2]);
         permissionsBundle.putIntArray("4", permissions[3]);
         myIntent.putExtra("permissions", permissionsBundle);
-        Tab1.this.startActivityForResult(myIntent, 0);
+        Tab1.this.startActivityForResult(myIntent, 17);
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(data==null)return;
         Bundle messageReturned = data.getBundleExtra("message_return");
         permissions = new int[4][6];
         permissions[0] = messageReturned.getIntArray("1");

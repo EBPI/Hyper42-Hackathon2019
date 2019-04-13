@@ -11,7 +11,7 @@ import android.widget.TextView;
  * Created by Rodrigo on 13/04/2018.
  */
 public class ClaimsMenu extends AppCompatActivity implements View.OnClickListener {
-    static final int RESULT_CODE = 0;
+    static final int RESULT_CODE = 17;
     int[][] permissions ;
     String[] roles = {"Airlines","Security","Customs","Shops","Lounge"};
     @Override
@@ -42,7 +42,7 @@ public class ClaimsMenu extends AppCompatActivity implements View.OnClickListene
                 permissionsBundle.putIntArray("3",permissions[2]);
                 permissionsBundle.putIntArray("4",permissions[3]);
                 intentWithResult.putExtra("message_return", permissionsBundle);
-                setResult(0,intentWithResult);
+                setResult(17,intentWithResult);
                 finish();
             }
         });
@@ -71,6 +71,7 @@ public class ClaimsMenu extends AppCompatActivity implements View.OnClickListene
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(data==null)return;
         int[] messageReturned = data.getIntArrayExtra("message_return");
 //        System.out.println("Result code = " + resultCode);
 //        System.out.println(messageReturned.toString());

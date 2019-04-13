@@ -59,7 +59,7 @@ public class ClaimIndDetails extends AppCompatActivity {
                 checkBox = findViewById(R.id.role_5_checkbox);
                 checkboxes[5]=checkBox.isChecked()? 1 : 0;
                 intentWithResult.putExtra("message_return", checkboxes);
-                setResult(0,intentWithResult);
+                setResult(17,intentWithResult);
                 finish();
             }
         });
