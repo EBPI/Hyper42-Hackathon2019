@@ -1,5 +1,6 @@
 package nl.hyper42.kim.android;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -7,13 +8,42 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by Kamere on 4/18/2018.
+ * Created by Rodrigo on 13/04/2018.
  */
 
-public class Tab3 extends Fragment {
+public class Tab3 extends Fragment implements View.OnClickListener {
+
+    private String TAG = "Tab3";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.tab3, container, false);
+        View view = inflater.inflate(R.layout.tab3, container, false);
+        View claim1 = view.findViewById(R.id.claim_1);
+        claim1.setOnClickListener(this);
+
+        return view;
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.claim_1:
+                onButtonClick(1);
+                break;
+            case R.id.claim_2:
+                onButtonClick(2);
+                break;
+            case R.id.claim_3:
+                onButtonClick(3);
+                break;
+            case R.id.claim_4:
+                onButtonClick(4);
+                break;
+        }
+    }
+    private void onButtonClick(int id) {
+        Intent myIntent = new Intent(getActivity(), Claim_1.class);
+        myIntent.putExtra("claim_id", id);
+        Tab3.this.startActivity(myIntent);
     }
 }
