@@ -27,7 +27,7 @@ import retrofit2.Response;
 public class Tab1 extends Fragment implements View.OnClickListener {
 
     private String TAG = "Tab1";
-
+    private int[][] permissions = new int[4][6];
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab1, container, false);
@@ -35,6 +35,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         button.setOnClickListener(this);
         button = view.findViewById(R.id.buttonLoadTicket);
         button.setOnClickListener(this);
+        initPermissions();
         view.findViewById(R.id.buttonApproveClaims).setOnClickListener(this);
 
         return view;
@@ -124,6 +125,30 @@ public class Tab1 extends Fragment implements View.OnClickListener {
     private void onButtonThreeClick(View view) {
         Intent myIntent = new Intent(getActivity(), ClaimsMenu.class);
 //        myIntent.putExtra("key", value); //Optional parameters
-        Tab1.this.startActivity(myIntent);
+        Bundle permissionsBundle = new Bundle();
+        permissionsBundle.putIntArray("1",permissions[0]);
+        permissionsBundle.putIntArray("2",permissions[1]);
+        permissionsBundle.putIntArray("3",permissions[2]);
+        permissionsBundle.putIntArray("4",permissions[3]);
+        myIntent.putExtra("permissions", permissionsBundle);
+        Tab1.this.startActivityForResult(myIntent,0);
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Bundle messageReturned = data.getBundleExtra("message_return");
+        permissions = new int[4][6];
+        permissions[0]=messageReturned.getIntArray("1");
+        permissions[1]=messageReturned.getIntArray("2");
+        permissions[2]=messageReturned.getIntArray("3");
+        permissions[3]=messageReturned.getIntArray("4");;
+
+    }
+
+    private void initPermissions(){
+        for(int i =0; i<4;i++){
+            permissions[i][0] = i;
+            for (int j = 1;  j<6;j++){
+                permissions[i][j] = 1;}
+        }
     }
 }
