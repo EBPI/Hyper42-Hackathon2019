@@ -21,7 +21,7 @@
             android:label="@string/title_activity_passport"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Claim_1"
+            android:name=".ClaimIndDetails"
             android:label="@string/title_activity_passport"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">

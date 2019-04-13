@@ -16,39 +16,39 @@ public class Tab3 extends Fragment implements View.OnClickListener {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.claims_menu, container, false);
-        View claim = view.findViewById(R.id.claim_1);
-        claim.setOnClickListener(this);
-        claim = view.findViewById(R.id.claim_2);
-        claim.setOnClickListener(this);
-        claim = view.findViewById(R.id.claim_3);
-        claim.setOnClickListener(this);
-        claim = view.findViewById(R.id.claim_4);
-        claim.setOnClickListener(this);
+        View view = inflater.inflate(R.layout.tab3, container, false);
+//        View claim = view.findViewById(R.id.claim_1);
+//        claim.setOnClickListener(this);
+//        claim = view.findViewById(R.id.claim_2);
+//        claim.setOnClickListener(this);
+//        claim = view.findViewById(R.id.claim_3);
+//        claim.setOnClickListener(this);
+//        claim = view.findViewById(R.id.claim_4);
+//        claim.setOnClickListener(this);
 
         return view;
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.claim_1:
-                onButtonClick(1);
-                break;
-            case R.id.claim_2:
-                onButtonClick(2);
-                break;
-            case R.id.claim_3:
-                onButtonClick(3);
-                break;
-            case R.id.claim_4:
-                onButtonClick(4);
-                break;
-        }
+//        switch (view.getId()) {
+//            case R.id.claim_1:
+//                onButtonClick(1);
+//                break;
+//            case R.id.claim_2:
+//                onButtonClick(2);
+//                break;
+//            case R.id.claim_3:
+//                onButtonClick(3);
+//                break;
+//            case R.id.claim_4:
+//                onButtonClick(4);
+//                break;
+//        }
     }
     private void onButtonClick(int id) {
-        Intent myIntent = new Intent(getActivity(), Claim_1.class);
-        myIntent.putExtra("claim_id", id);
-        Tab3.this.startActivity(myIntent);
+//        Intent myIntent = new Intent(getActivity(), ClaimIndDetails.class);
+//        myIntent.putExtra("claim_id", id);
+//        Tab3.this.startActivity(myIntent);
     }
 }

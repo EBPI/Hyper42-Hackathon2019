@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Claim_1"
-    tools:showIn="@layout/activity_claim1">
+    tools:context=".ClaimIndDetails"
+    tools:showIn="@layout/activity_claim_ind_details">
 
     <LinearLayout
         android:layout_width="match_parent"
