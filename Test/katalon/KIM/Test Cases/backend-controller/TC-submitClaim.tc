@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC-submitClaim</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9697a4c2-7183-4684-bb2c-9c927c5baf9f</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>460d1ca6-1d1e-4efe-8d7b-9acefd69e7eb</id>
+      <masked>false</masked>
+      <name>claimAddresses</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>42f53172-9de0-41cf-ba86-12852d3cc6f9</id>
+      <masked>false</masked>
+      <name>dataHash</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>2a219941-6d27-4e3a-9e1d-85ed731b4224</id>
+      <masked>false</masked>
+      <name>dataHashLocation</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>808ca987-3973-405d-bec2-4fa20ce9cdf7</id>
+      <masked>false</masked>
+      <name>dataHashSalt</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>d29d7eab-acc2-4c80-8315-bcb5e7769831</id>
+      <masked>false</masked>
+      <name>photo</name>
+   </variable>
+</TestCaseEntity>
