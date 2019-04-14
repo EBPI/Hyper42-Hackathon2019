@@ -5,11 +5,13 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener {
     Toolbar toolbar;
     ViewPager viewPager;
     TabLayout tabLayout;
+    public static boolean claimsChanged = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,12 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
     @Override
     public void onTabSelected(TabLayout.Tab tab) {
         viewPager.setCurrentItem(tab.getPosition());
+        System.out.println("Claims changed "+claimsChanged);
+        if (MainActivity.claimsChanged){
+            View button = findViewById(R.id.buttonShareClaims);
+            button.setEnabled(true);
+            button.setBackground(getResources().getDrawable(R.drawable.button_primary));
+        }
     }
 
     @Override

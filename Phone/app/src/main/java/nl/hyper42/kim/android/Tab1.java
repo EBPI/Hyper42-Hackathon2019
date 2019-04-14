@@ -15,6 +15,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import nl.hyper42.kim.android.generated.travel.Authorisation;
@@ -35,7 +36,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
 
     private String TAG = "Tab1";
     private int[][] permissions = new int[4][6];
-
+//    boolean claimsChanged = false;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab1, container, false);
@@ -142,12 +143,20 @@ public class Tab1 extends Fragment implements View.OnClickListener {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(data==null)return;
         Bundle messageReturned = data.getBundleExtra("message_return");
-        permissions = new int[4][6];
-        permissions[0] = messageReturned.getIntArray("1");
-        permissions[1] = messageReturned.getIntArray("2");
-        permissions[2] = messageReturned.getIntArray("3");
-        permissions[3] = messageReturned.getIntArray("4");
-        ;
+        int[][] new_permissions = new int[4][6];
+//        permissions = new int[4][6];
+        new_permissions[0] = messageReturned.getIntArray("1");
+        new_permissions[1] = messageReturned.getIntArray("2");
+        new_permissions[2] = messageReturned.getIntArray("3");
+        new_permissions[3] = messageReturned.getIntArray("4");
+        MainActivity.claimsChanged = !Arrays.deepEquals(permissions, new_permissions);
+//        create a deep copy of permissions 2D array
+        for(int i=0;i<permissions.length;i++){
+            for(int j=0;j<permissions[0].length;j++){
+                permissions[i][j] = new_permissions[i][j];
+            }
+        }
+        System.out.println("Claims changed "+MainActivity.claimsChanged);
         processAndCreateClaims();
     }
 
