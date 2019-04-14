@@ -46,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="First Name:"
+            android:text="First name:"
             android:textSize="20dp" />
 
         <TextView
@@ -64,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="Last Name:"
+            android:text="Last name:"
             android:textSize="20dp" />
 
         <TextView
@@ -116,7 +116,7 @@
 
         <Button
             android:id="@+id/buttonScanPassport"
-            android:layout_width="208dp"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_columnSpan="2"
             android:layout_gravity="center_horizontal"
@@ -124,34 +124,34 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/button_secondary"
             android:paddingHorizontal="32dp"
-            android:text="Scan Passport"
+            android:text="Scan passport"
             android:textColor="@color/klm_white"
             android:textSize="20dp" />
 
 
         <Button
             android:id="@+id/buttonLoadTicket"
-            android:layout_width="208dp"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_columnSpan="2"
             android:layout_gravity="center_horizontal"
             android:layout_margin="1dp"
             android:background="@drawable/button_secondary"
             android:paddingHorizontal="32dp"
-            android:text="Load Ticket"
+            android:text="Load ticket"
             android:textColor="@color/klm_white"
             android:textSize="20dp" />
 
         <Button
             android:id="@+id/buttonApproveClaims"
-            android:layout_width="208dp"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_columnSpan="2"
             android:layout_gravity="center_horizontal"
             android:layout_margin="1dp"
             android:background="@drawable/button_primary"
             android:paddingHorizontal="32dp"
-            android:text="Approve Claims"
+            android:text="Approve claims"
             android:textColor="@color/klm_white"
             android:textSize="20dp" />
 
