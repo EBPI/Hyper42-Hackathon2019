@@ -82,36 +82,35 @@ public class ClaimsMenu extends AppCompatActivity implements View.OnClickListene
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (data==null)return;
         int[] messageReturned = data.getIntArrayExtra("message_return");
-//        System.out.println("Result code = " + resultCode);
-//        System.out.println(messageReturned.toString());
-//        System.out.println("Message returned = " + messageReturned.toString());
         int index = messageReturned[0];
         permissions[index]= messageReturned;
-        updateAccesibleTexts();
+        updateAccessibleTexts();
     }
-    private void updateAccesibleTexts(){
-
-        String[] accesible_texts = new String[permissions.length];
+    private void updateAccessibleTexts(){
+        String[] accessible_texts = new String[permissions.length];
         for (int j = 0;j<permissions.length;j++){
-            accesible_texts[j] = "None";
+            accessible_texts[j] = "None"; //By default no one is added
             for (int i = permissions[0].length-1; i>0; i--){
                  if (permissions[j][i] == 1)
-                        if(accesible_texts[j]=="None")
-                            accesible_texts[j] = " & "+ roles[i-1];
-                        else
-                         accesible_texts[j] = ", "+roles[i-1] +accesible_texts[j];
+                        if(accessible_texts[j]=="None") //If empty string and role authorized then add to string.
+                            accessible_texts[j] = " & "+ roles[i-1];
+                        else //Concatenate the rest of allowed roles
+                         accessible_texts[j] = ", "+roles[i-1] +accessible_texts[j];
             }
-            if (accesible_texts[j].startsWith(" &") || accesible_texts[j].startsWith(", "))
-                accesible_texts[j]= accesible_texts[j].substring(2);
+            if (accessible_texts[j].startsWith(" &") || accessible_texts[j].startsWith(", "))//Clean beginning of string
+                accessible_texts[j]= accessible_texts[j].substring(2);
 
             }
+            updateTextView(accessible_texts);
+    }
+    private void updateTextView(String[] accessible_texts){
         TextView text = findViewById(R.id.claim_1_access);
-        text.setText("Accesible by: "+accesible_texts[0]);
+        text.setText("Accessible by: "+accessible_texts[0]);
         text = findViewById(R.id.claim_2_access);
-        text.setText("Accesible by: "+accesible_texts[1]);
+        text.setText("Accessible by: "+accessible_texts[1]);
         text = findViewById(R.id.claim_3_access);
-        text.setText("Accesible by: "+accesible_texts[2]);
+        text.setText("Accessible by: "+accessible_texts[2]);
         text = findViewById(R.id.claim_4_access);
-        text.setText("Accesible by: "+accesible_texts[3]);
+        text.setText("Accessible by: "+accessible_texts[3]);
     }
 }
