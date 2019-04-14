@@ -43,7 +43,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/button_primary"
         android:paddingHorizontal="32dp"
-        android:text="Share Claims"
+        android:text="Share claims"
         android:textColor="@color/klm_white"
         android:textSize="20dp" />
     </GridLayout>

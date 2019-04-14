@@ -26,8 +26,8 @@ public class Tab2 extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         Toast.makeText(getContext(), "Your claims have been shared", Toast.LENGTH_LONG).show();
         view.findViewById(R.id.buttonShareClaims);
-        view.setEnabled(false);
-        view.setBackground(getResources().getDrawable(R.drawable.button_disabled));
+//        view.setEnabled(false);
+//        view.setBackground(getResources().getDrawable(R.drawable.button_disabled));
 
     }
 }
