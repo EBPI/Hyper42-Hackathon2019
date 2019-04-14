@@ -31,6 +31,17 @@
             android:textColor="@color/klm_blue"
             android:textSize="30dp" />
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:maxHeight="200dp"
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/criminal" />
+
         <TextView
             android:id="@+id/textView6"
             android:layout_width="200dp"

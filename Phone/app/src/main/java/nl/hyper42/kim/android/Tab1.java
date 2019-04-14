@@ -129,7 +129,6 @@ public class Tab1 extends Fragment implements View.OnClickListener {
 
     private void onButtonThreeClick(View view) {
         Intent myIntent = new Intent(getActivity(), ClaimsMenu.class);
-//        myIntent.putExtra("key", value); //Optional parameters
         Bundle permissionsBundle = new Bundle();
         permissionsBundle.putIntArray("1", permissions[0]);
         permissionsBundle.putIntArray("2", permissions[1]);
