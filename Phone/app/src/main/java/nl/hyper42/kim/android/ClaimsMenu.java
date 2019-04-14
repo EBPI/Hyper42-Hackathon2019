@@ -80,6 +80,7 @@ public class ClaimsMenu extends AppCompatActivity implements View.OnClickListene
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (data==null)return;
         int[] messageReturned = data.getIntArrayExtra("message_return");
 //        System.out.println("Result code = " + resultCode);
 //        System.out.println(messageReturned.toString());

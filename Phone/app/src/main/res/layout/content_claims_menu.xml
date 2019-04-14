@@ -356,7 +356,7 @@
             android:layout_gravity="center"
             android:background="@drawable/button_primary"
             android:gravity="center"
-            android:text="Confirm"
+            android:text="Send claims"
             android:textColor="@color/klm_white" />
     </LinearLayout>
 
