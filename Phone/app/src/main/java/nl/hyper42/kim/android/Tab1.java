@@ -166,7 +166,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         }
         for (int i = 0; i < converted_permissions.size(); i++) {
             System.out.println("Claim " + i);
-            for (int j = 0; j < converted_permissions.get(0).size(); j++) {
+            for (int j = 0; j < converted_permissions.get(i).size(); j++) {
                 System.out.print(" Role " + j + " " + converted_permissions.get(i).get(j));
             }
             System.out.println();
