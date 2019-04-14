@@ -351,13 +351,14 @@
 
         <Button
             android:id="@+id/buttonConfirm"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/button_primary"
             android:gravity="center"
-            android:text="Send claims"
-            android:textColor="@color/klm_white" />
+            android:text="Authorize claims"
+            android:textColor="@color/klm_white"
+            android:textSize="20dp" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -151,7 +151,7 @@
             android:layout_margin="1dp"
             android:background="@drawable/button_primary"
             android:paddingHorizontal="32dp"
-            android:text="Approve claims"
+            android:text="Manage claims"
             android:textColor="@color/klm_white"
             android:textSize="20dp" />
 
