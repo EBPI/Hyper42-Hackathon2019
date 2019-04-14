@@ -69,7 +69,8 @@
                             android:paddingLeft="10dp"
                             android:paddingTop="10dp"
                             android:paddingBottom="5dp"
-                            android:text="Are you older than 18 years old?" />
+                            android:text="Are you older than 18 years old?"
+                            android:textStyle="bold" />
 
                         <Space
                             android:layout_width="0dp"
@@ -148,7 +149,9 @@
                             android:paddingLeft="10dp"
                             android:paddingTop="10dp"
                             android:paddingBottom="5dp"
-                            android:text="Are you an EU citizen?" />
+                            android:text="Are you an EU citizen?"
+                            android:textAllCaps="false"
+                            android:textStyle="bold" />
 
                         <Space
                             android:layout_width="0dp"
@@ -228,7 +231,8 @@
                             android:paddingLeft="10dp"
                             android:paddingTop="10dp"
                             android:paddingBottom="5dp"
-                            android:text="Are you you flying outside EU?" />
+                            android:text="Are you you flying outside EU?"
+                            android:textStyle="bold" />
 
                         <Space
                             android:layout_width="0dp"
@@ -308,7 +312,8 @@
                             android:paddingLeft="10dp"
                             android:paddingTop="10dp"
                             android:paddingBottom="5dp"
-                            android:text="Which level of SkyBlue are you?" />
+                            android:text="Which level of SkyBlue are you?"
+                            android:textStyle="bold" />
 
                         <Space
                             android:layout_width="0dp"
