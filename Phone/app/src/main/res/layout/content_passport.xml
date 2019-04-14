@@ -40,7 +40,7 @@
             android:adjustViewBounds="true"
             android:maxHeight="200dp"
             android:paddingBottom="20dp"
-            app:srcCompat="@drawable/criminal" />
+            app:srcCompat="@drawable/criminal3" />
 
         <TextView
             android:id="@+id/textView6"
@@ -74,7 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="Walter"
+            android:text="Gargamel"
 
             android:textSize="20dp" />
 
@@ -93,7 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
-            android:text="Wright"
+            android:text="Peyo"
 
             android:textSize="20dp" />
 

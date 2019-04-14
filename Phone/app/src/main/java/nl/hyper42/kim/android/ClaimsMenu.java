@@ -20,13 +20,12 @@ public class ClaimsMenu extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.activity_claims_menu);
         Toolbar toolbar = findViewById(R.id.toolbarComplaintsMenu);
         setSupportActionBar(toolbar);
+
         Intent intent = getIntent();
         Bundle messageReturned = intent.getBundleExtra("permissions");
         onCreateInitPermissions(messageReturned);
-        findViewById(R.id.claim_1).setOnClickListener(this);
-        findViewById(R.id.claim_2).setOnClickListener(this);
-        findViewById(R.id.claim_3).setOnClickListener(this);
-        findViewById(R.id.claim_4).setOnClickListener(this);
+        setListeners();
+
         Button btn = findViewById(R.id.buttonConfirm);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +36,12 @@ public class ClaimsMenu extends AppCompatActivity implements View.OnClickListene
                 finish();
             }
         });
+    }
+    private void setListeners(){
+        findViewById(R.id.claim_1).setOnClickListener(this);
+        findViewById(R.id.claim_2).setOnClickListener(this);
+        findViewById(R.id.claim_3).setOnClickListener(this);
+        findViewById(R.id.claim_4).setOnClickListener(this);
     }
 
     private Bundle onCreateInitBundle() {
@@ -80,7 +85,7 @@ public class ClaimsMenu extends AppCompatActivity implements View.OnClickListene
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (data==null)return;
+        if (data==null)return;//When back button is pressed from android system
         int[] messageReturned = data.getIntArrayExtra("message_return");
         int index = messageReturned[0];
         permissions[index]= messageReturned;
@@ -91,15 +96,12 @@ public class ClaimsMenu extends AppCompatActivity implements View.OnClickListene
         for (int j = 0;j<permissions.length;j++){
             accessible_texts[j] = "None"; //By default no one is added
             for (int i = permissions[0].length-1; i>0; i--){
-                 if (permissions[j][i] == 1)
-                        if(accessible_texts[j]=="None") //If empty string and role authorized then add to string.
-                            accessible_texts[j] = " & "+ roles[i-1];
-                        else //Concatenate the rest of allowed roles
-                         accessible_texts[j] = ", "+roles[i-1] +accessible_texts[j];
+                 if (permissions[j][i] == 0) continue; //If 0 dont add to
+                 if (accessible_texts[j] == "None") accessible_texts[j] = " & " + roles[i - 1]; //If empty string and role authorized then add to string.
+                 else accessible_texts[j] = ", " + roles[i - 1] + accessible_texts[j]; //Concatenate the rest of allowed roles
             }
             if (accessible_texts[j].startsWith(" &") || accessible_texts[j].startsWith(", "))//Clean beginning of string
                 accessible_texts[j]= accessible_texts[j].substring(2);
-
             }
             updateTextView(accessible_texts);
     }

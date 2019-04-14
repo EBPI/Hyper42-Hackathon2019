@@ -26,10 +26,10 @@ public class ClaimIndDetails extends AppCompatActivity {
         setContentView(R.layout.activity_claim_ind_details);
         Toolbar toolbar = findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
-
+        //Update checkboxes according to permissions
         permissions = getIntent().getIntArrayExtra("permissions");
         TextView claimText = findViewById(R.id.claim_text_details);
-        claimText.setText(claims[permissions[0]]);//Index from 0 in array and claim ids start at 1 (sorry used to python now)
+        claimText.setText(claims[permissions[0]]);
         onCreateInitCheckbox();
 
         //Find confirm button, when clicked, the activity ends and go back to prev. screen
